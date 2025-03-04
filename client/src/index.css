@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1 {
+    color: #000;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+h2 {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+h6 {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+p {
+    color: #101010;
+
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+.btn {
+    color: #000;
+
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+input {
+    color: #000;
+
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+nav a {
+    color: #000;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
