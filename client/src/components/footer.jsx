@@ -1,0 +1,16 @@
+import React from 'react';
+import logo from "../assets/footer-logo.png";
+
+function footer() {
+    return (
+        <>
+            <div className="container flex flex-col justify-center gap-[36px] text-center">
+                <img src={logo} alt="" className="mx-auto w-auto h-auto"/>
+
+                <p className=' !text-white'>Storynoi © 2023. All Rights Reserved.</p>
+            </div>
+        </>
+    )
+}
+
+export default footer

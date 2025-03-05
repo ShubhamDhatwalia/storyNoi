@@ -64,6 +64,12 @@ p {
     text-transform: capitalize;
 }
 
+.btn:hover {
+    cursor: pointer;
+    background: #FF8E00;
+    color: white !important;
+}
+
 input {
     color: #000;
 
@@ -74,11 +80,69 @@ input {
     line-height: normal;
 }
 
-nav a {
+nav a,
+nav Link {
+    cursor: pointer;
     color: #000;
-
+    white-space: nowrap;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+nav a:hover {
+    color: #FF8E00;
+}
+
+.storNoi-ul li {
+    display: flex;
+    align-items: start;
+    gap: 18px;
+    color: #101010;
+
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px;
+
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .input-btn{
+        padding: 20px ;
+    }
+    .input-group input{
+        padding: 30px 170px 30px 30px;
+    }
 }
