@@ -138,6 +138,7 @@ nav a:hover {
     }
     p{
         font-size: 12px;
+        line-height: 12px;
     }
     .input-btn{
         padding: 20px ;
