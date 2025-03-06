@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Link } from 'react-scroll';
 import {Link as RouterLink} from 'react-router-dom'
 
-function Navbar() {
+function Navigation() {
 
     const [isOpen, setOpen] = useState(false);
     const [isScrolled, setScrolled] = useState(false);
@@ -134,4 +134,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default Navigation;

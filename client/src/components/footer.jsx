@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "../assets/footer-logo.png";
 
-function footer() {
+function Footer() {
     return (
         <>
             <div className="bg-[url('./assets/footerbg.png')] bg-cover bg-center bg-no-repeat sm:py-[112px] py-[30px]">
@@ -16,4 +16,4 @@ function footer() {
     )
 }
 
-export default footer
+export default Footer
