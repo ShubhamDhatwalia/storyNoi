@@ -1,6 +1,5 @@
 import React from 'react';
-import Navigation from "./Navigation.jsx";
-import Footer from './Footer.jsx';
+
 import star from "../assets/star.png";
 import bannerimg from "../assets/banner-image.png";
 import aboutimg from "../assets/aboutimg.png";
@@ -15,8 +14,6 @@ function Home() {
 
             <div id='top' className="bg-[url('./assets/banner-section-bg.png')] bg-cover bg-no-repeat bg-center  w-full">
 
-
-                <Navigation />
 
 
                 <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px]">
@@ -144,7 +141,7 @@ function Home() {
 
 
 
-            <Footer />
+           
 
 
 
