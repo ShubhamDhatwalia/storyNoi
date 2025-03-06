@@ -98,7 +98,7 @@ function Navbar() {
                 >
 
                     <div className='flex justify-between items-center'>
-                        <Link to='top' smooth={true} duration={500} className='cursor-pointer'>
+                        <Link to='top' smooth={true} duration={500} className='cursor-pointer' onClick={()=> setOpen(!isOpen)}>
                             <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
                         </Link>
 
@@ -108,20 +108,20 @@ function Navbar() {
 
                     <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
                         <li>
-                            <Link to='about' smooth={true} duration={500} spy={true} offset={-87}
+                            <Link to='about' smooth={true} duration={500} spy={true} offset={-60} onClick={()=> setOpen(!isOpen)}
                                 activeClass="!text-[#FF8E00]">About Us</Link>
                         </li>
                         <li>
-                            <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-87}
+                            <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-60} onClick={()=> setOpen(!isOpen)}
                                 activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
                         </li>
                         <li>
-                            <Link to='idea' smooth={true} duration={500} spy={true} offset={-87}
+                            <Link to='idea' smooth={true} duration={500} spy={true} offset={-60} onClick={()=> setOpen(!isOpen)}
                                 activeClass="!text-[#FF8E00]">Idea</Link>
                         </li>
                         <a
                             href="#login"
-                            className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
+                            className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid " onClick={()=> setOpen(!isOpen)}
                         >
                             <button type="button">Login</button>
                         </a>
