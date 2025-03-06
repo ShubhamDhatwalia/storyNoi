@@ -129,21 +129,31 @@ nav a:hover {
     }
 }
 
-@media screen and (max-width: 520px){
-    h1{
+@media screen and (max-width: 520px) {
+    h1 {
         font-size: 30px;
     }
-    h2{
+
+    h2 {
         font-size: 20px;
     }
-    p{
+
+    p {
         font-size: 12px;
-        line-height: 15px;
+        line-height: 18px;
+       
     }
-    .input-btn{
-        padding: 20px ;
+
+    .storNoi-ul li {
+        font-size: 12px;
+        line-height: 18px;
     }
-    .input-group input{
+
+    .input-btn {
+        padding: 20px;
+    }
+
+    .input-group input {
         padding: 30px 170px 30px 30px;
     }
 }
