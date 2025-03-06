@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-scroll';
+import {Link as RouterLink} from 'react-router-dom'
 
 function Navbar() {
 
@@ -71,12 +72,12 @@ function Navbar() {
                                 activeClass="!text-[#FF8E00]">Idea</Link>
 
                         </li>
-                        <a
-                            href="#login"
+                        <RouterLink
+                            to="/login"
                             className="btn ml-[80px] font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
                         >
                             <button type="button">Login</button>
-                        </a>
+                        </RouterLink>
                     </ul>
                 </nav>
 
@@ -119,12 +120,12 @@ function Navbar() {
                             <Link to='idea' smooth={true} duration={500} spy={true} offset={-60} onClick={()=> setOpen(!isOpen)}
                                 activeClass="!text-[#FF8E00]">Idea</Link>
                         </li>
-                        <a
-                            href="#login"
+                        <RouterLink
+                            to="/login"
                             className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid " onClick={()=> setOpen(!isOpen)}
                         >
                             <button type="button">Login</button>
-                        </a>
+                        </RouterLink>
                     </ul>
                 </nav>
             </div>
