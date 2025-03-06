@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../assets/footer-logo.png";
 
+
 function Footer() {
     return (
         <>
@@ -9,6 +10,8 @@ function Footer() {
                     <img src={logo} alt="" className="mx-auto sm:w-auto w-[120px] h-[auto]" />
 
                     <p className=' !text-white'>Storynoi © 2023. All Rights Reserved.</p>
+
+                   
                 </div>
 
             </div>

@@ -7,44 +7,55 @@ import storyNoiimg from "../assets/storyNoiimg.png";
 import whystory from "../assets/whystoryNoi-image.png";
 import listMark from "../assets/list-mark.png";
 import ideaimg from "../assets/idea-img.png";
+import topRight from "../assets/top-right.png";
+import topleft from "../assets/top-left.png"
+
 
 function Home() {
     return (
         <>
 
-            <div id='top' className="bg-[url('./assets/banner-section-bg.png')] bg-cover bg-no-repeat bg-center  w-full">
+            <div id='top' className="  w-full relative">
+
+                <div className="bg-[url('./assets/bg-particales.png')] bg-center bg-no-repeat">
+
+                    <img src={topleft} alt="" className='absolute top-0 left-0' />
+                    <img src={topRight} alt="" className='absolute top-0 right-0' />
 
 
+                    <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px]">
+                        <div className="content lg:max-w-[656px] md:mt-[75px] order-2 lg:order-1 w-full justify-items-center md:justify-items-normal">
 
-                <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px]">
-                    <div className="content lg:flex-1/2 md:mt-[75px] order-2 lg:order-1 w-full justify-items-center md:justify-items-normal">
+                            <h1 className='text-center md:text-left'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
+                            <h2 className='sm:mt-[59px] mt-[20px]'>Express your idea in a few words!</h2>
+                            <form className="input-group max-w-[646px] relative mt-[33px]">
+                                <input type="text" placeholder='Share your idea to start the book creation' className='bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none  ' />
+                                <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
+                            </form>
 
-                        <h1 className='text-center md:text-left'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
-                        <h2 className='sm:mt-[59px] mt-[20px]'>Express your idea in a few words!</h2>
-                        <form className="input-group max-w-[646px] relative mt-[33px]">
-                            <input type="text" placeholder='Share your idea to start the book creation' className='bg-white rounded-[20px] w-full  py-[33px] pl-[30px] pr-[220px] focus:outline-none  ' />
-                            <button type='submit' className='input-btn btn py-[24px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
-                        </form>
+                            <div className='flex w-full sm:gap-[113px] justify-around md:justify-normal  sm:mt-[96px] mt-[50px]'>
 
-                        <div className='flex w-full sm:gap-[113px] justify-around md:justify-normal  sm:mt-[96px] mt-[50px]'>
+                                <div >
+                                    <h6>Downloads</h6>
+                                    <h1 className='mt-[16px]'>12 000</h1>
+                                </div>
 
-                            <div >
-                                <h6>Downloads</h6>
-                                <h1>12 000</h1>
+                                <div>
+                                    <h6>Assessment</h6>
+                                    <h1 className='flex items-center gap-[6px] mt-[16px]'>4.8 <img src={star} alt="" /> </h1>
+                                </div>
+
                             </div>
+                        </div>
+                        <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
 
-                            <div>
-                                <h6>Assessment</h6>
-                                <h1 className='flex items-center gap-[6px]'>4.8 <img src={star} alt="" /> </h1>
-                            </div>
+                            <img src={bannerimg} alt="" className='w-[100%] h-[auto]' />
 
                         </div>
-                    </div>
-                    <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
+                    </section>
+                </div>
 
-                        <img src={bannerimg} alt="" />
-                    </div>
-                </section>
+
 
             </div>
 
@@ -141,7 +152,7 @@ function Home() {
 
 
 
-           
+
 
 
 

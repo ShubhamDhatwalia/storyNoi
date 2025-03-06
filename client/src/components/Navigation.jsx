@@ -46,7 +46,7 @@ function Navigation() {
 
             <div className='container flex justify-between items-center'>
                 <Link to='top' smooth={true} duration={500} className='cursor-pointer'>
-                    <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
+                    <img src={logo} alt="Logo" className="sm:w-[100%] h-auto w-[100px]" />
                 </Link>
 
 
@@ -74,9 +74,9 @@ function Navigation() {
                         </li>
                         <RouterLink
                             to="/login"
-                            className="btn ml-[80px] font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
+                            className="btn ml-[30px] font-semibold px-[44px] py-[12px] border-2 border-black rounded-[12px] border-solid "
                         >
-                            <button type="button">Login</button>
+                            <button type="button">Log In</button>
                         </RouterLink>
                     </ul>
                 </nav>
@@ -122,9 +122,9 @@ function Navigation() {
                         </li>
                         <RouterLink
                             to="/login"
-                            className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid " onClick={()=> setOpen(!isOpen)}
+                            className="btn font-semibold px-[45px] py-[12px] border-2 border-black rounded-[12px] border-solid " onClick={()=> setOpen(!isOpen)}
                         >
-                            <button type="button">Login</button>
+                            <button type="button">Log In</button>
                         </RouterLink>
                     </ul>
                 </nav>

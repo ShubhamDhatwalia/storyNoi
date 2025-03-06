@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
     position: relative;
+    
 }
 
 .container {
@@ -54,6 +55,13 @@ p {
     line-height: 35px;
 }
 
+
+#top {
+    background: linear-gradient(134deg, #FEE051 0%, rgba(254, 224, 81, 0.60) 51.92%, #FEE051 97.91%);
+    overflow: hidden !important;
+    
+}
+
 .btn {
     color: #000;
 
@@ -79,6 +87,7 @@ input {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
 }
 
 nav a,
@@ -142,14 +151,15 @@ nav a:hover {
     p {
         font-size: 12px;
         line-height: 18px;
-       
+
     }
 
     .storNoi-ul li {
         font-size: 12px;
         line-height: 18px;
     }
-    .storNoi-ul li img{
+
+    .storNoi-ul li img {
         margin-top: 5px;
         width: 14px;
         height: 10px;
