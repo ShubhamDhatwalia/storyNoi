@@ -145,7 +145,7 @@ function App() {
         </div>
       </section>
 
-      <div className="bg-[url('./assets/footerbg.png')] bg-cover bg-center bg-no-repeat py-[112px]">
+      <div className="bg-[url('./assets/footerbg.png')] bg-cover bg-center bg-no-repeat sm:py-[112px] py-[50px]">
 
 
         <Footer />
