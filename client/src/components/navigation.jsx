@@ -92,40 +92,40 @@ function Navbar() {
                 {/* mobile navigation  */}
 
                 <nav
-                    className={`lg:hidden bg-white  backdrop-blur-xs  sm:top-[-40px] top-[-20px] absolute right-0 p-[20px]  w-full h-screen   overflow-hidden duration-500 
+                    className={`lg:hidden bg-white  backdrop-blur-xs   absolute right-0 p-[20px]  w-full h-screen   overflow-hidden duration-500 
                     
-                    ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}`}
+                    ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}  ${isScrolled ? 'top-[0px]' : 'sm:top-[-40px] top-[-20px]'}`}
                 >
 
-                        <div className='flex justify-between items-center'>
-                            <Link to='top' smooth={true} duration={500} className='cursor-pointer'>
-                                <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
-                            </Link>
+                    <div className='flex justify-between items-center'>
+                        <Link to='top' smooth={true} duration={500} className='cursor-pointer'>
+                            <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
+                        </Link>
 
-                            <X size={32} onClick={()=> setOpen(!isOpen)}/>
-                        </div>
+                        <X size={32} onClick={() => setOpen(!isOpen)} />
+                    </div>
 
 
-                        <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
-                            <li>
-                                <Link to='about' smooth={true} duration={500} spy={true} offset={-87}
-                                    activeClass="!text-[#FF8E00]">About Us</Link>
-                            </li>
-                            <li>
-                                <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-87}
-                                    activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
-                            </li>
-                            <li>
-                                <Link to='idea' smooth={true} duration={500} spy={true} offset={-87}
-                                    activeClass="!text-[#FF8E00]">Idea</Link>
-                            </li>
-                            <a
-                                href="#login"
-                                className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
-                            >
-                                <button type="button">Login</button>
-                            </a>
-                        </ul>
+                    <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
+                        <li>
+                            <Link to='about' smooth={true} duration={500} spy={true} offset={-87}
+                                activeClass="!text-[#FF8E00]">About Us</Link>
+                        </li>
+                        <li>
+                            <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-87}
+                                activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
+                        </li>
+                        <li>
+                            <Link to='idea' smooth={true} duration={500} spy={true} offset={-87}
+                                activeClass="!text-[#FF8E00]">Idea</Link>
+                        </li>
+                        <a
+                            href="#login"
+                            className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
+                        >
+                            <button type="button">Login</button>
+                        </a>
+                    </ul>
                 </nav>
             </div>
 
