@@ -11,7 +11,7 @@ function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY ) {
+            if (window.scrollY) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -25,12 +25,12 @@ function Navbar() {
 
 
 
-    useEffect(()=>{
-        if(isOpen){
+    useEffect(() => {
+        if (isOpen) {
             document.body.classList.add('overflow-hidden');
-        }else{
+        } else {
             document.body.classList.remove('overflow-hidden');
-            
+
         }
     }, [isOpen]);
 
@@ -39,13 +39,13 @@ function Navbar() {
 
     return (
         <div className={`fixed right-0 left-0 z-10 transition-all duration-500 
-            ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm py-3 shadow-md' : 'top-[40px]  '}
+            ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm sm:py-3 py-1 shadow-md' : 'sm:top-[40px] top-[20px] '}
         `}>
 
 
             <div className='container flex justify-between items-center'>
                 <Link to='top' smooth={true} duration={500} className='cursor-pointer'>
-                    <img src={logo} alt="Logo" className="w-[150px]" />
+                    <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
                 </Link>
 
 
@@ -81,53 +81,51 @@ function Navbar() {
                 </nav>
 
 
-                <button className="lg:hidden relative w-[52px] h-[52px]" onClick={() => setOpen(!isOpen)}>
+                <button className="lg:hidden relative w-[52px] h-[52px] flex items-center justify-end" onClick={() => setOpen(!isOpen)}>
                     {/* Menu Icon */}
-                    <Menu
-                        size={42}
-                        className={`absolute inset-0 transition-all duration-500 ease-in-out transform
-                                ${isOpen ? 'opacity-0 scale-75 rotate-45' : 'opacity-100 scale-100 rotate-0'}`}
-                    />
+                    <Menu size={32} />
 
-                   
+
                 </button>
 
 
                 {/* mobile navigation  */}
 
                 <nav
-                    className={`lg:hidden bg-white  backdrop-blur-xs  top-[-40px] absolute right-0 p-[40px]  w-full h-screen   overflow-hidden duration-500 
+                    className={`lg:hidden bg-white  backdrop-blur-xs  sm:top-[-40px] top-[-20px] absolute right-0 p-[20px]  w-full h-screen   overflow-hidden duration-500 
                     
                     ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'}`}
                 >
 
-                     {/* Close Icon */}
-                     <X
-                        size={42}
-                        className={`absolute right-[20px]  transition-all duration-500 ease-in-out transform`}
-                        onClick={()=> setOpen(!isOpen)}
-                    />
+                        <div className='flex justify-between items-center'>
+                            <Link to='top' smooth={true} duration={500} className='cursor-pointer'>
+                                <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
+                            </Link>
 
-                    <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
-                        <li>
-                            <Link to='about' smooth={true} duration={500} spy={true} offset={-87}
-                                activeClass="!text-[#FF8E00]">About Us</Link>
-                        </li>
-                        <li>
-                            <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-87}
-                                activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
-                        </li>
-                        <li>
-                            <Link to='idea' smooth={true} duration={500} spy={true} offset={-87}
-                                activeClass="!text-[#FF8E00]">Idea</Link>
-                        </li>
-                        <a
-                            href="#login"
-                            className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
-                        >
-                            <button type="button">Login</button>
-                        </a>
-                    </ul>
+                            <X size={32} onClick={()=> setOpen(!isOpen)}/>
+                        </div>
+
+
+                        <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
+                            <li>
+                                <Link to='about' smooth={true} duration={500} spy={true} offset={-87}
+                                    activeClass="!text-[#FF8E00]">About Us</Link>
+                            </li>
+                            <li>
+                                <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-87}
+                                    activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
+                            </li>
+                            <li>
+                                <Link to='idea' smooth={true} duration={500} spy={true} offset={-87}
+                                    activeClass="!text-[#FF8E00]">Idea</Link>
+                            </li>
+                            <a
+                                href="#login"
+                                className="btn font-semibold px-[45px] py-[18px] border-2 border-black rounded-[12px] border-solid "
+                            >
+                                <button type="button">Login</button>
+                            </a>
+                        </ul>
                 </nav>
             </div>
 
