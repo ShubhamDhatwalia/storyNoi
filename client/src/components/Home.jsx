@@ -13,6 +13,7 @@ import bottomright from "../assets/bottom-right.png"
 import bottomleft from "../assets/bottom-left.png";
 import topcenter from "../assets/top-center.png";
 import center from "../assets/center.png"
+import Particle from './Particle';
 
 
 function Home() {
@@ -21,12 +22,21 @@ function Home() {
 
             <div id='top' className="  w-full relative">
 
+
+                <div className='absolute  overflow-hidden w-full h-full'>
+
+                    <Particle />
+                </div>
+
                 <div className="">
 
-                    <img src={topleft} alt="" className='absolute top-0 left-0' />
-                    <img src={topRight} alt="" className='absolute top-0 right-0' />
+                    <img src={topleft} alt="" className='absolute top-0 left-0 z-10' />
+                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' />
 
-                    <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px] relative">
+                    <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px]  relative">
+
+
+
                         <div className="content lg:max-w-[656px] md:py-[75px] order-2 lg:order-1 w-full justify-items-center md:justify-items-normal z-10 relative">
 
                             <h1 className='text-center md:text-left relative z-10'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
