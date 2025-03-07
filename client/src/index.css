@@ -166,10 +166,11 @@ nav a:hover {
     }
 
     .input-btn {
-        padding: 20px;
+        padding: 12px;
+        font-size: 14px;
     }
 
     .input-group input {
-        padding: 30px 170px 30px 30px;
+        padding: 20px 135px 20px 20px;
     }
 }

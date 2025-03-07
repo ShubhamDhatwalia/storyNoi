@@ -31,7 +31,7 @@ function Home() {
 
                             <h1 className='text-center md:text-left relative z-10'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
                             <h2 className='sm:mt-[59px] mt-[20px] relative z-10'>Express your idea in a few words!</h2>
-                            <form className="input-group max-w-[646px] relative mt-[33px] z-10">
+                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10">
                                 <input type="text" placeholder='Share your idea to start the book creation' className='bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none  ' />
                                 <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
                             </form>
