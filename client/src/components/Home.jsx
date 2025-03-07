@@ -9,6 +9,10 @@ import listMark from "../assets/list-mark.png";
 import ideaimg from "../assets/idea-img.png";
 import topRight from "../assets/top-right.png";
 import topleft from "../assets/top-left.png"
+import bottomright from "../assets/bottom-right.png"
+import bottomleft from "../assets/bottom-left.png";
+import topcenter from "../assets/top-center.png";
+import center from "../assets/center.png"
 
 
 function Home() {
@@ -17,41 +21,49 @@ function Home() {
 
             <div id='top' className="  w-full relative">
 
-                <div className="bg-[url('./assets/bg-particales.png')] bg-center bg-no-repeat">
+                <div className="">
 
                     <img src={topleft} alt="" className='absolute top-0 left-0' />
                     <img src={topRight} alt="" className='absolute top-0 right-0' />
 
+                    <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px] relative">
+                        <div className="content lg:max-w-[656px] md:py-[75px] order-2 lg:order-1 w-full justify-items-center md:justify-items-normal z-10 relative">
 
-                    <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px]">
-                        <div className="content lg:max-w-[656px] md:mt-[75px] order-2 lg:order-1 w-full justify-items-center md:justify-items-normal">
-
-                            <h1 className='text-center md:text-left'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
-                            <h2 className='sm:mt-[59px] mt-[20px]'>Express your idea in a few words!</h2>
-                            <form className="input-group max-w-[646px] relative mt-[33px]">
+                            <h1 className='text-center md:text-left relative z-10'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
+                            <h2 className='sm:mt-[59px] mt-[20px] relative z-10'>Express your idea in a few words!</h2>
+                            <form className="input-group max-w-[646px] relative mt-[33px] z-10">
                                 <input type="text" placeholder='Share your idea to start the book creation' className='bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none  ' />
                                 <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
                             </form>
 
-                            <div className='flex w-full sm:gap-[113px] justify-around md:justify-normal  sm:mt-[96px] mt-[50px]'>
+                            <div className='flex w-full sm:gap-[113px] justify-around md:justify-normal  sm:mt-[96px] mt-[50px] relative z-10'>
 
                                 <div >
                                     <h6>Downloads</h6>
-                                    <h1 className='mt-[16px]'>12 000</h1>
+                                    <h1 className='mt-[0px]'>12 000</h1>
                                 </div>
 
                                 <div>
                                     <h6>Assessment</h6>
-                                    <h1 className='flex items-center gap-[6px] mt-[16px]'>4.8 <img src={star} alt="" /> </h1>
+                                    <h1 className='flex items-center gap-[6px] mt-[0px]'>4.8 <img src={star} alt="" /> </h1>
                                 </div>
 
                             </div>
+
+                            <img src={topcenter} alt="" className='absolute md:top-[-45px] top-[-115px] sm:right-[180px] right-[30%] z-0' />
+                            <img src={center} alt="" className='absolute md:bottom-[190px] sm:bottom-[100px] bottom-[50px] sm:right-[328px] right-[30%] z-0' />
                         </div>
+
                         <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
 
-                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-10' />
+                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' />
 
                         </div>
+
+
+                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' />
+                        <img src={bottomleft} alt="" className='absolute bottom-[20px] left-[-144px]' />
+
                     </section>
                 </div>
 
