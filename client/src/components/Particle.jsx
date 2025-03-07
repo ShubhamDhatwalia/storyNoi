@@ -48,7 +48,7 @@ const Particle = (props) => {
           },
         },
         color: {
-          value: "",
+          value: "#fff",
         },
         shape: {
           type: ["polygon"], // 🔥 Mixed hexagons & points
@@ -59,7 +59,7 @@ const Particle = (props) => {
           },
         },
         opacity: {
-          value: 0.3, // a bit more visible
+          value: 0, // a bit more visible
         },
         size: {
           value: {
@@ -74,7 +74,7 @@ const Particle = (props) => {
         },
         collisions: {
             enable: true, // ✅ prevent overlap
-            mode: "bounce",
+            // mode: "bounce",
           },
         move: {
           enable: true,
