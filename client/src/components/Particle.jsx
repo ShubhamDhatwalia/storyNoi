@@ -41,7 +41,7 @@ const Particle = (props) => {
       },
       particles: {
         number: {
-          value: 50, // ⬆️ Increased quantity
+          value: 40, // ⬆️ Increased quantity
           density: {
             enable: true,
             area: 1000,
@@ -68,7 +68,7 @@ const Particle = (props) => {
           },
         },
         stroke: {
-          width: 0.7,
+          width: 0.6,
           color: "#ffffff",
           join: "miter",
         },

@@ -62,7 +62,7 @@ function Navigation() {
                         </li>
                         <li>
 
-                            <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-87}
+                            <Link to='whystoryNoi' smooth={true} duration={500} spy={true} offset={-87}
                                 activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
 
                         </li>
@@ -113,7 +113,7 @@ function Navigation() {
                                 activeClass="!text-[#FF8E00]">About Us</Link>
                         </li>
                         <li>
-                            <Link to='storyNoi' smooth={true} duration={500} spy={true} offset={-60} onClick={()=> setOpen(!isOpen)}
+                            <Link to='whystoryNoi' smooth={true} duration={500} spy={true} offset={-60} onClick={()=> setOpen(!isOpen)}
                                 activeClass="!text-[#FF8E00]">Why StoryNoi</Link>
                         </li>
                         <li>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import star from "../assets/star.png";
 import bannerimg from "../assets/banner-image.png";
@@ -14,9 +14,40 @@ import bottomleft from "../assets/bottom-left.png";
 import topcenter from "../assets/top-center.png";
 import center from "../assets/center.png"
 import Particle from './Particle';
+import { useNavigate } from 'react-router-dom';
+import { validateIdea } from './helper/Validation.jsx'
 
 
 function Home() {
+
+    const navigate = useNavigate();
+
+    const [idea, setIdea] = useState("");
+    const [isError, setIsError] = useState(false);
+
+
+    const  handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const error = await validateIdea(idea);
+
+        if (error) {
+            setIsError(error);
+            setIdea("");
+        }else{
+            setIsError(false);
+            navigate("/story", {state:{idea}});
+            setIdea("");
+        }
+       
+    };
+
+    const handleChange = (e) => {
+        setIdea(e.target.value);
+        setIsError(false);
+    }
+
+
     return (
         <>
 
@@ -25,7 +56,7 @@ function Home() {
 
                 <div className='absolute  overflow-hidden w-[100%] h-[100%]'>
 
-                <Particle  />
+                    <Particle />
 
                 </div>
 
@@ -42,8 +73,9 @@ function Home() {
 
                             <h1 className='text-center md:text-left relative z-10'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
                             <h2 className='sm:mt-[59px] mt-[15px] relative z-10'>Express your idea in a few words!</h2>
-                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10">
-                                <input type="text" placeholder='Share your idea to start the book creation' className='bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none  ' />
+
+                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit}>
+                                <input type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
                                 <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
                             </form>
 
