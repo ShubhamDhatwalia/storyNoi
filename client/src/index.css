@@ -168,9 +168,13 @@ nav a:hover {
     .input-btn {
         padding: 12px;
         font-size: 14px;
+        right: 5px;
+        top: 6px;
     }
 
     .input-group input {
-        padding: 20px 135px 20px 20px;
+        padding: 18px 125px 18px 18px;
+        font-size: 14px;
+        border-radius: 12px;
     }
 }
