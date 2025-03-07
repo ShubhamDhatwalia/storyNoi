@@ -55,6 +55,11 @@ p {
     line-height: 35px;
 }
 
+#tsparticles{
+    width: 100%;
+    height: 100%;
+}
+
 
 #top {
     background: linear-gradient(134deg, #FEE051 0%, rgba(254, 224, 81, 0.60) 51.92%, #FEE051 97.91%);

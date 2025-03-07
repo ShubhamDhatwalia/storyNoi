@@ -23,9 +23,10 @@ function Home() {
             <div id='top' className="  w-full relative">
 
 
-                <div className='absolute  overflow-hidden w-full h-full'>
+                <div className='absolute  overflow-hidden w-[100%] h-[100%]'>
 
-                    <Particle />
+                <Particle  />
+
                 </div>
 
                 <div className="">
