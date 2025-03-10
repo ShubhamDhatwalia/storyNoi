@@ -1,8 +1,13 @@
-import cohere from 'cohere-ai';
-import dotenv from 'dotenv';
+import { CohereClient } from "cohere-ai";
+import dotenv from "dotenv";
 
-dotenv.config();
+// Load environment variables
+dotenv.config();  
 
-cohere.init(process.env.COHERE_API_KEY);
 
-export default CohereConfig; 
+// Initialize Cohere Client
+const cohere = new CohereClient({
+    token: process.env.COHERE_API_KEY  
+});
+
+export default cohere;

@@ -7,7 +7,7 @@ body {
     padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
     position: relative;
-    
+
 }
 
 .container {
@@ -55,7 +55,7 @@ p {
     line-height: 35px;
 }
 
-#tsparticles{
+#tsparticles {
     width: 100%;
     height: 100%;
 }
@@ -64,7 +64,7 @@ p {
 #top {
     background: linear-gradient(134deg, #FEE051 0%, rgba(254, 224, 81, 0.60) 51.92%, #FEE051 97.91%);
     overflow: hidden !important;
-    
+
 }
 
 .btn {
@@ -124,14 +124,70 @@ nav a:hover {
 
 }
 
+.generatedStory h1 {
+
+    font-family: "Plus Jakarta Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.generatedStory h2 {
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 17px;
+
+}
+
+.generatedStory p {
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 17px;
+}
+
+.generatedStory div {
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+   
+}
+
+.generatedStory li {
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.storybtn {
+
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding:  15px 0;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1480px) {
     .container {
         padding-left: 20px;
         padding-right: 20px;
     }
 }
-
-
 
 @media screen and (max-width: 768px) {
 

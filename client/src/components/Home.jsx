@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom';
 import { validateIdea } from './helper/Validation.jsx'
 
 
+
 function Home() {
 
     const navigate = useNavigate();
@@ -26,7 +27,8 @@ function Home() {
     const [isError, setIsError] = useState(false);
 
 
-    const  handleSubmit = async (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const error = await validateIdea(idea);
@@ -34,12 +36,12 @@ function Home() {
         if (error) {
             setIsError(error);
             setIdea("");
-        }else{
+        } else {
             setIsError(false);
-            navigate("/story", {state:{idea}});
+            navigate("/story", { state: { idea } });
             setIdea("");
         }
-       
+
     };
 
     const handleChange = (e) => {
@@ -63,13 +65,18 @@ function Home() {
                 <div className="">
 
                     <img src={topleft} alt="" className='absolute top-0 left-0 z-10' />
+
                     <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' />
+
+
 
                     <section id='hero-section' className="container hero-section sm:pt-[200px] pt-[130px] sm:pb-[100px] pb-[50px] flex flex-wrap lg:flex-nowrap items-center gap-[70px]  relative">
 
 
 
                         <div className="content lg:max-w-[656px] md:py-[75px] order-2 lg:order-1 w-full justify-items-center md:justify-items-normal z-10 relative">
+
+
 
                             <h1 className='text-center md:text-left relative z-10'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
                             <h2 className='sm:mt-[59px] mt-[15px] relative z-10'>Express your idea in a few words!</h2>
@@ -94,7 +101,13 @@ function Home() {
                             </div>
 
                             <img src={topcenter} alt="" className='absolute md:top-[-45px] top-[-115px] sm:right-[180px] right-[30%] z-0' />
+
                             <img src={center} alt="" className='absolute md:bottom-[190px] sm:bottom-[100px] bottom-[45px] sm:right-[328px] right-[30%] z-0' />
+
+
+
+
+
                         </div>
 
                         <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
