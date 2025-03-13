@@ -10,7 +10,9 @@ function Story() {
     const location = useLocation();
     const idea = location.state?.idea;
     const fetched = useRef(false);
+    const scrollRef = useRef(null);
 
+    // Load story from localStorage
     useEffect(() => {
         const savedStory = localStorage.getItem('generatedStory');
         if (savedStory) {
@@ -18,10 +20,11 @@ function Story() {
             setStorySections(parsedStory);
             setIsStoryGenerated(parsedStory.length > 0);
         } else {
-            setIsStoryGenerated(false); // Ensures "Generating story..." is shown when storage is empty
+            setIsStoryGenerated(false);
         }
     }, []);
 
+    // Fetch new story if not in localStorage
     useEffect(() => {
         const fetchStory = async () => {
             if (!idea || fetched.current) return;
@@ -48,39 +51,44 @@ function Story() {
         fetchStory();
     }, [idea]);
 
-    // Listen for changes in localStorage
+    // Auto-scroll to latest section
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+        }
+    }, [storySections]);
+
+    // Handle localStorage updates (sync across tabs)
     useEffect(() => {
         const handleStorageChange = () => {
             const savedStory = localStorage.getItem('generatedStory');
-
-            console.log(savedStory);
             if (savedStory) {
                 const updatedStory = JSON.parse(savedStory);
+                console.log("Loaded Story Data:", updatedStory); 
                 setStorySections(updatedStory);
                 setIsStoryGenerated(updatedStory.length > 0);
             } else {
-                setStorySections([]); // Clear the story when storage is empty
+                setStorySections([]);
                 setIsStoryGenerated(false);
             }
         };
 
         window.addEventListener("storage", handleStorageChange);
-
-        return () => {
-            window.removeEventListener("storage", handleStorageChange);
-        };
+        return () => window.removeEventListener("storage", handleStorageChange);
     }, []);
 
     return (
         <>
-            <div className="bg-[url('./assets/create-story-bg.png')] py-[160px] bg-no-repeat bg-center bg-cover ">
+            <div className="bg-[url('./assets/create-story-bg.png')] py-[160px] bg-no-repeat bg-center bg-cover">
                 <div className="container">
-                    <div className='bg-[#F6F6F6] h-[80vh] p-[20px] py-[70px] rounded-[22px] '>
-                        <div className="generatedStory flex flex-col gap-[38px] h-[100%] overflow-y-auto rounded-[10px] px-[50px]">
+                    <div id='story' className='bg-[#F6F6F6] h-[100vh] p-[20px] py-[70px] rounded-[22px]'>
+                        <div id='story'
+                            ref={scrollRef} 
+                            className="generatedStory flex flex-col gap-[38px] h-[100%] overflow-y-auto rounded-[10px] px-[50px]"
+                        >
                             {storySections.length > 0 ? (
                                 storySections.map((section, index) => (
                                     <div key={index} className="bg-white p-[30px] rounded-[10px] shadow-lg">
-                                        {/* Render the image if imageURL exists */}
                                         {section.imageURL && (
                                             <img
                                                 src={section.imageURL}
@@ -88,18 +96,13 @@ function Story() {
                                                 className="w-full h-auto rounded-lg mb-4"
                                             />
                                         )}
-
-                                        {/* Render the heading */}
                                         <div className="text-xl font-bold" dangerouslySetInnerHTML={{ __html: section.heading }} />
-
-                                        {/* Render the content */}
                                         <div className="text-base" dangerouslySetInnerHTML={{ __html: section.content.join("") }} />
                                     </div>
                                 ))
                             ) : (
                                 <p className="text-lg font-semibold">Generating story...</p>
                             )}
-
                         </div>
                     </div>
                 </div>
