@@ -13,7 +13,7 @@ function downloadPopup({ onClose }) {
 
         WithWatermark();
 
-        onclose();
+        onClose();
 
     }
 

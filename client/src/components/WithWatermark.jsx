@@ -1,12 +1,38 @@
 import html2pdf from "html2pdf.js";
 
-export const WithWatermark = () => {
+import watermarkImage from "../assets/waterMark.png";
+
+export const WithWatermark = async () => {
     const storyData = JSON.parse(localStorage.getItem("generatedStory"));
 
     if (!storyData || storyData.length === 0) {
         alert("No story content found!");
         return;
     }
+
+    // Convert image to Base64
+    const convertImageToBase64 = (url) => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "Anonymous"; // Avoid CORS issues
+            img.onload = function () {
+                const canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+                resolve(canvas.toDataURL("image/png"));
+            };
+            img.onerror = function (error) {
+                console.error("Error loading watermark image", error);
+                reject(new Error("Failed to load watermark image: " + url));
+            };
+            img.src = url;
+        });
+    };
+
+    // Convert imported image URL to Base64
+    const watermarkBase64 = await convertImageToBase64(watermarkImage);
 
     // Create the container for the content
     const contentDiv = document.createElement("div");
@@ -20,49 +46,15 @@ export const WithWatermark = () => {
     contentDiv.style.flexDirection = "column";
     contentDiv.style.minHeight = "100vh";
 
-    // Function to add watermark as repeated text
-    const addWatermark = () => {
-        const watermarkDiv = document.createElement("div");
-        watermarkDiv.style.position = "absolute";
-        watermarkDiv.style.top = "0";
-        watermarkDiv.style.left = "0";
-        watermarkDiv.style.width = "100%";
-        watermarkDiv.style.height = "100%";
-        watermarkDiv.style.pointerEvents = "none"; // Ensure it's not interactive
-        watermarkDiv.style.zIndex = "-1"; // Send behind content
-        watermarkDiv.style.display = "grid";
-        watermarkDiv.style.gridTemplateRows = "repeat(8, 1fr)";
-        watermarkDiv.style.gridTemplateColumns = "repeat(3, 1fr)";
-        watermarkDiv.style.opacity = "0.15"; // Adjust transparency
-
-        for (let i = 0; i < 15; i++) {
-            const watermarkText = document.createElement("div");
-            watermarkText.innerHTML = "Confidential"; // Change to your watermark text
-            watermarkText.style.fontSize = "32px";
-            watermarkText.style.color = "black";
-            watermarkText.style.transform = "rotate(-30deg)";
-            watermarkText.style.whiteSpace = "nowrap";
-            watermarkText.style.textAlign = "center";
-            watermarkText.style.margin = "auto";
-
-            watermarkDiv.appendChild(watermarkText);
-        }
-
-        contentDiv.appendChild(watermarkDiv);
-    };
-
-    // Add watermark
-    addWatermark();
-
     // Generate story content dynamically
     storyData.forEach((section) => {
         const sectionDiv = document.createElement("div");
         sectionDiv.style.marginBottom = "40px";
-        sectionDiv.style.pageBreakInside = "avoid"; // Prevent breaking inside sections
+        sectionDiv.style.pageBreakInside = "avoid";
 
         const wrapper = document.createElement("div");
         wrapper.style.pageBreakInside = "avoid";
-        wrapper.style.display = "inline-block"; // Prevent image breaking
+        wrapper.style.display = "inline-block";
 
         if (section.imageURL) {
             const img = document.createElement("img");
@@ -96,7 +88,7 @@ export const WithWatermark = () => {
 
     document.body.appendChild(contentDiv);
 
-    // Convert HTML to PDF
+    // Convert HTML to PDF and add watermark image
     html2pdf()
         .set({
             margin: 10,
@@ -106,7 +98,43 @@ export const WithWatermark = () => {
             jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
         })
         .from(contentDiv)
-        .save()
+        .toPdf()
+        .get("pdf")
+        .then((pdf) => {
+            const totalPages = pdf.internal.getNumberOfPages();
+            const pageWidth = pdf.internal.pageSize.getWidth();
+            const pageHeight = pdf.internal.pageSize.getHeight();
+            const watermarkWidth = 50; // Adjust size as needed
+            const watermarkHeight = 50;
+            const watermarkSpacing = 80; // Spacing between watermarks
+
+            // Apply watermark to each page
+            for (let i = 1; i <= totalPages; i++) {
+                pdf.setPage(i);
+
+                // Set watermark opacity
+                pdf.setGState(new pdf.GState({ opacity: 0.2 })); // Adjust opacity (0.1 - 1.0)
+
+                // Tile the watermark
+                for (let y = 0; y < pageHeight; y += watermarkSpacing) {
+                    for (let x = 0; x < pageWidth; x += watermarkSpacing) {
+                        pdf.addImage(
+                            watermarkBase64,
+                            "PNG",
+                            x,
+                            y,
+                            watermarkWidth,
+                            watermarkHeight
+                        );
+                    }
+                }
+
+                // Reset opacity back to normal for text content
+                // pdf.setGState(new pdf.GState({ opacity: 0.2 }));
+            }
+
+            pdf.save("Generated_Story.pdf");
+        })
         .then(() => {
             document.body.removeChild(contentDiv);
         });
