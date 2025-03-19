@@ -166,14 +166,14 @@ function Storyfooter({ isStoryGenerated }) {
                         {!startConversation && !imagesGenerated && (
                             <div className='flex gap-[16px]'>
                                 <button
-                                    className={`storybtn hover:bg-[#69d8db] bg-[#5CE1E6] rounded-[12px] w-1/2 ${!isStoryGenerated || isGeneratingImages ? "opacity-50 !cursor-not-allowed" : ""}`}
+                                    className={`storybtn hover:bg-[#69d8db] bg-[#5CE1E6] rounded-[12px] w-1/2 ${!isStoryGenerated || isGeneratingImages ? "opacity-50 !cursor-not-allowed !pointer-events-none" : ""}`}
                                     onClick={() => isStoryGenerated && setConversation(true)}
                                     
                                 >
                                     Prefer any changes
                                 </button>
 
-                                <button className={`storybtn hover:bg-[#f38f14] bg-[#FF8E00] rounded-[12px] w-1/2 !text-white ${!isStoryGenerated ||  isGeneratingImages ? "opacity-50 !cursor-not-allowed" : ""} `} onClick={handleImageGeneration}>
+                                <button className={`storybtn hover:bg-[#f38f14] bg-[#FF8E00] rounded-[12px] w-1/2 !text-white ${!isStoryGenerated ||  isGeneratingImages ? "opacity-50 !pointer-events-none !cursor-not-allowed" : ""} `} onClick={handleImageGeneration}>
                                     Generate pics
                                 </button>
                             </div>
@@ -188,7 +188,7 @@ function Storyfooter({ isStoryGenerated }) {
                                         <img src={sendbtn} alt="" className={`w-[74px] h-[60px] ${!isStoryGenerated || isGeneratingImages ? "opacity-50 !cursor-not-allowed" : ""}`} />
                                     </button>
 
-                                    <button className={`storybtn hover:bg-[#f38f14] bg-[#FF8E00] rounded-[12px] !text-white ${!isStoryGenerated || isGeneratingImages ? "opacity-50 !cursor-not-allowed" : ""} `} onClick={handleImageGeneration}>
+                                    <button className={`storybtn hover:bg-[#f38f14] bg-[#FF8E00] rounded-[12px] !text-white ${!isStoryGenerated || isGeneratingImages ? "opacity-50 !pointer-events-none !cursor-not-allowed" : ""} `} onClick={handleImageGeneration}>
                                         Generate pics
                                     </button>
                                 </div>

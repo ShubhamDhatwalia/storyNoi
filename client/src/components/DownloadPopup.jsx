@@ -5,7 +5,12 @@ import { X } from 'lucide-react';
 import { generatePDF } from './GeneratePdf';
 import { WithWatermark } from './WithWatermark';
 
+import { useNavigate } from 'react-router-dom';
+
 function downloadPopup({ onClose }) {
+
+
+    const navigate = useNavigate();
 
 
 
@@ -20,8 +25,7 @@ function downloadPopup({ onClose }) {
 
     const handleDownload = () => {
         
-        generatePDF();
-
+        navigate('/checkout');
         onClose();
     }
 

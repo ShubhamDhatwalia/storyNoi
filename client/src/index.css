@@ -35,6 +35,25 @@ h2 {
     text-transform: capitalize;
 }
 
+h3 {
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h5 {
+    color: #000;
+
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 h6 {
     color: #000;
     font-family: "Plus Jakarta Sans";
@@ -135,7 +154,8 @@ nav a:hover {
     text-align: center;
 }
 
-.generatedStory h2 ,h3 {
+.generatedStory h2,
+.generatedStory h3 {
     font-family: "Plus Jakarta Sans";
     font-size: 28px;
     font-style: normal;
@@ -185,15 +205,40 @@ nav a:hover {
 
 #changesInput {
     overflow: hidden;
-    
+
     text-overflow: ellipsis;
     font-family: "Plus Jakarta Sans";
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    
+
 }
+
+#paymentForm label {
+    color: #000;
+    opacity: 0.5;
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+#paymentForm input, #paymentForm Select {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 14px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 
 @media screen and (max-width: 1480px) {
     .container {

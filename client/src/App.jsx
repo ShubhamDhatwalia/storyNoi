@@ -6,6 +6,7 @@ import Login from './components/Login';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
 import Story from './components/Story'
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/story' element={<Story />} />
+            <Route path='/checkout' element={<Checkout />} />
+
           </Route>
 
           
