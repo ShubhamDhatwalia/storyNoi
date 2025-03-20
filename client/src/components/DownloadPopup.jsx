@@ -2,7 +2,7 @@ import React from 'react';
 import topLeft from '../assets/top-left.png';
 import topRight from "../assets/top-right.png";
 import { X } from 'lucide-react';
-import { generatePDF } from './GeneratePdf';
+
 import { WithWatermark } from './WithWatermark';
 
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ function downloadPopup({ onClose }) {
 
 
 
-    const downloadWithWatermark =() =>{
+    const downloadWithWatermark = () => {
 
         WithWatermark();
 
@@ -24,7 +24,7 @@ function downloadPopup({ onClose }) {
 
 
     const handleDownload = () => {
-        
+
         navigate('/checkout');
         onClose();
     }
@@ -38,25 +38,25 @@ function downloadPopup({ onClose }) {
      h-[100vh] top-0 bottom-0 z-40 bg-[rgba(255,142,0,0.8)] flex items-center justify-center p-[50px] '>
 
 
-                <div className='bg-[white] rounded-[10px] xl:p-[200px] p-[100px] relative'>
+                <div className='bg-[white] rounded-[10px] xl:p-[200px] md:p-[100px] sm:p-[50px] p-[30px] py-[80px]  relative'>
 
-                    <img src={topLeft} alt="" className='absolute left-[20px] top-0' />
-                    <img src={topRight} alt="" className='absolute right-0 bottom-[40px]' />
-
-
-                    <X size={32} className='absolute top-[30px] right-[30px]' onClick={onClose} />
+                    <img src={topLeft} alt="" className='sm:block absolute hidden left-[20px] top-0' />
+                    <img src={topRight} alt="" className='sm:block absolute hidden right-0 bottom-[40px]' />
 
 
+                    <X size={32} className='absolute sm:top-[30px] top-[10px] sm:right-[30px] right-[10px] z-10' onClick={onClose} />
 
 
-                    <h1 className='xl:!text-[52px] md:!text-[42px] !text-[25px] text-center'>Are you sure to download ebook</h1>
 
-                    <div className='flex gap-[14px] mt-[48px] px-[50px]'>
-                        <button className={`storybtn hover:bg-[#69d8db] bg-[#5CE1E6] rounded-[12px] w-1/2 whitespace-nowrap`}  onClick={downloadWithWatermark}  >
+
+                    <h1 className='xl:!text-[52px] md:!text-[42px] !text-[20px] text-center relative z-10'>Are you sure to download ebook</h1>
+
+                    <div className='flex lg:flex-nowrap flex-wrap justify-center gap-[14px] mt-[48px] sm:px-[50px] relative z-10'>
+                        <button className={`storybtn hover:bg-[#69d8db] bg-[#5CE1E6] rounded-[12px] lg:w-1/2 w-full whitespace-nowrap`} onClick={downloadWithWatermark}  >
                             Download with watermark
                         </button>
 
-                        <button className={`storybtn hover:bg-[#f38f14] bg-[#FF8E00] rounded-[12px] w-1/2 !text-white whitespace-nowrap`} onClick={handleDownload} >
+                        <button className={`storybtn hover:bg-[#f38f14] bg-[#FF8E00] rounded-[12px] w-full lg:w-1/2 !text-white whitespace-nowrap`} onClick={handleDownload} >
                             Download without Watermark
                         </button>
                     </div>

@@ -165,7 +165,9 @@ nav a:hover {
 
 }
 
-.generatedStory p {
+.generatedStory p,
+.generatedStory div,
+.generatedStory li {
     font-family: "Plus Jakarta Sans";
     font-size: 20px;
     font-style: normal;
@@ -174,22 +176,6 @@ nav a:hover {
     margin-top: 17px;
 }
 
-.generatedStory div {
-    font-family: "Plus Jakarta Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 32px;
-
-}
-
-.generatedStory li {
-    font-family: "Plus Jakarta Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 32px;
-}
 
 .storybtn {
 
@@ -226,7 +212,8 @@ nav a:hover {
     margin-top: 10px;
 }
 
-#paymentForm input, #paymentForm Select {
+#paymentForm input,
+#paymentForm Select {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 100%;
@@ -259,6 +246,35 @@ nav a:hover {
 }
 
 @media screen and (max-width: 520px) {
+    .storybtn {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .generatedStory p,
+    .generatedStory div,
+    .generatedStory li {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 10px;
+    }
+
+    .generatedStory h2,
+    .generatedStory h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .generatedStory h1 {
+        font-size: 20px;
+    }
+
+    #paymentForm input,
+    #paymentForm Select {
+        padding: 10px;
+        margin-top: 5px;
+    }
+
     h1 {
         font-size: 30px;
     }
@@ -296,4 +312,66 @@ nav a:hover {
         font-size: 14px;
         border-radius: 12px;
     }
+}
+
+@media screen and (max-width: 450px) {
+    .perfer-btn {
+        width: 54px;
+        height: 40px;
+    }
+
+    .story-btn-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .story-btn-container button {
+        width: 100%;
+    }
+}
+
+
+
+
+@media print {
+    body * {
+        visibility: hidden;
+        /* Hide everything */
+        margin: 0px !important;
+    }
+
+    .printable-content,
+    .printable-content * {
+        visibility: visible;
+        
+    }
+
+    .printable-content {
+        position: absolute;
+        left: 0;
+        top: 0 !important;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        page-break-before: always;
+
+    }
+
+   
+
+    .printable-content div {
+        box-shadow: none !important;
+        padding: 0px !important;
+        margin-top: 10px !important;
+    }
+
+    @page {
+        size: auto;
+        /* Default to page size */
+        margin-left: 10 !important;
+        margin-right: 10 !important;
+
+    }
+
+
 }
