@@ -3,7 +3,7 @@ import sendbtn from '../assets/sendbtn.png';
 import axios from 'axios';
 import { validateIdea } from './helper/Validation';
 import { ParseStory } from './ParseStory';
-import DownloadPopup from './downloadPopup';
+import DownloadPopup from './DownloadPopup.jsx';
 import { blobToBase64 } from './blobtobase64';
 
 
