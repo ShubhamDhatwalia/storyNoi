@@ -52,7 +52,7 @@ function Story() {
             fetched.current = true;
 
             try {
-                const response = await axios.post('http://localhost:5000/story/generateStory', { idea });
+                const response = await axios.post(`${Import.meta.env.VITE_API_BASE_URL}/story/generateStory`, { idea });
 
                 const formattedStory = ParseStory(response.data.story);
                 setStorySections(formattedStory);
