@@ -1,6 +1,6 @@
 import cohere from '../config/CohereConfig.js';
 
-let previousStory = "";
+let previousStory = ""; 
 
 async function generateStory(req, res) {
     try {
@@ -17,7 +17,7 @@ async function generateStory(req, res) {
             - Title inside <h1> tag
             - Sections inside <h2> tag
             - Any Section should not be empty
-            - Paragraphs inside <p> tag should contains only 50 words
+            - Paragraphs inside <p> tag
             Make it detailed and engaging.`;
             previousStory = ""; // Reset previous story when starting fresh
         }
