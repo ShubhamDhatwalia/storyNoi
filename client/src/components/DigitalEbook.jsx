@@ -39,7 +39,7 @@ const DigitalEbook = () => {
                                 {page.content && (
                                     <div>
                                         {page.content.map((para, i) => (
-                                            <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
+                                            <p key={i} dangerouslySetInnerHTML={{ __html: para }} className="!px-[20px] !py-[10px]" />
                                         ))}
                                     </div>
                                 )}
