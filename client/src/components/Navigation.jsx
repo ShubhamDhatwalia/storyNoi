@@ -10,7 +10,7 @@ function Navigation() {
     const location = useLocation();
 
     // List of paths where the menu should be hidden
-    const hideMenuPath = ['/story', '/checkout'];
+    const hideMenuPath = ['/story', '/checkout', '/digitalEbook'];
 
     useEffect(() => {
         const handleScroll = () => {

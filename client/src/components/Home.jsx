@@ -167,9 +167,9 @@ function Home() {
 
                     </div>
 
-                    <div className='lg:w-1/2 w-full justify-items-center lg:justify-items-normal'>
+                    <div className='lg:w-1/2 w-full justify-items-center lg:justify-items-normal gap-[20px]'>
 
-                        <img src={storyNoiimg} alt="" className=' lg:absolute mt-[20px] rounded-2xl lg:rounded-none lg:mt-[0px] top-0 right-0' />
+                        <img src={storyNoiimg} alt="" className=' lg:absolute mt-[20px] lg:w-[50%] rounded-2xl lg:rounded-none lg:mt-[0px] top-0 right-0' />
 
                     </div>
                 </div>

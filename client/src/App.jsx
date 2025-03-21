@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
 import Story from './components/Story'
 import Checkout from './components/Checkout';
+import DigitalEbook from './components/DigitalEbook';
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/story' element={<Story />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/digitalEbook' element={<DigitalEbook />} />
+
 
           </Route>
 
