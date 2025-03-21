@@ -9,6 +9,7 @@ import stroyTopRight from "../assets/story-top-right.png"
 
 
 
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 
 
 function Story() {
@@ -19,7 +20,7 @@ function Story() {
     const fetched = useRef(false);
     const scrollRef = useRef(null);
 
- 
+
 
     // Load story from localStorage
     useEffect(() => {
@@ -52,7 +53,7 @@ function Story() {
             fetched.current = true;
 
             try {
-                const response = await axios.post(`${Import.meta.env.VITE_API_BASE_URL}/story/generateStory`, { idea });
+                const response = await axios.post(`/story/generateStory`, { idea });
 
                 const formattedStory = ParseStory(response.data.story);
                 setStorySections(formattedStory);
@@ -114,7 +115,7 @@ function Story() {
                             ref={scrollRef}
                             className="generatedStory flex flex-col sm:gap-[38px] gap-[20px] h-[100%] overflow-y-auto rounded-[10px] md:px-[50px]"
                         >
-                            <div  className='printable-content' >
+                            <div className='printable-content' >
                                 {storySections.length > 0 ? (
                                     storySections.map((section, index) => (
                                         <div key={index} className="bg-white sm:p-[30px] p-[10px] rounded-[10px] shadow-lg" >
@@ -138,7 +139,7 @@ function Story() {
                 </div>
             </div>
 
-            <Storyfooter isStoryGenerated={isStoryGenerated}  />
+            <Storyfooter isStoryGenerated={isStoryGenerated} />
         </>
     );
 }
