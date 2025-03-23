@@ -142,7 +142,7 @@ function Storyfooter({ isStoryGenerated }) {
                 window.dispatchEvent(new Event("storage"));
 
 
-                axios.post('http://localhost:5000/story/generateStory', {
+                axios.post(`${import.meta.env.VITE_API_BASE_URL}/story/generateStory`, {
                     prompt: tempPrompt,
                     continueStory: true
                 }).then(response => {
