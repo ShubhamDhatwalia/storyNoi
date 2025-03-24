@@ -120,7 +120,7 @@ function Storyfooter({ isStoryGenerated }) {
             });
         
            
-            const results = await Promise.allSettled(requests);
+            const results = await Promise.all(requests);
         
           
             console.log("🔄 All image requests processed:", results);
