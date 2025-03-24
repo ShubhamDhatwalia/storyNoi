@@ -1,6 +1,6 @@
 import cohere from '../config/CohereConfig.js';
 
-let previousStory = ""; 
+let previousStory = "";
 
 async function generateStory(req, res) {
     try {
@@ -10,7 +10,10 @@ async function generateStory(req, res) {
 
         if (continueStory && previousStory) {
             // Append to the existing story
-            fullPrompt = ` Content of story should be same and structure also have to follow same  previousStory:\n${previousStory}\n\n     but strictly ${prompt}  and give full story or return previousStory `;
+            fullPrompt = `Continue the story while maintaining the style, tone, and structure of the previous content. Ensure that the new content smoothly extends the existing story.
+             Previous Story:\n${previousStory}\n\n
+             Now, continue by strictly following this instruction: ${prompt} 
+             - Maintain story coherence.`;
         } else {
             // Start a new story
             fullPrompt = `Write a structured long story on ${idea} with at least 20000 words.
