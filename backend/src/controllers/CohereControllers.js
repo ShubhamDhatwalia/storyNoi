@@ -10,13 +10,14 @@ async function generateStory(req, res) {
 
         if (continueStory && previousStory) {
             // Append to the existing story
-            fullPrompt = `Continue the story while maintaining the style, tone, and structure of the previous content. Ensure that the new content smoothly extends the existing story.
-             Previous Story:\n${previousStory}\n\n
-             Now, continue by strictly following this instruction: ${prompt} 
-             - keep story format as it was strictly.
-             - Do changes only in that story whatever you want.
-             - return full story with changes in it.
-             - no need to add any other message like ok upadated version or anything else.`;
+            fullPrompt = `Continue the story while maintaining the same style, tone, and structure as the previous content. 
+            The new content must seamlessly extend the existing story without breaking its flow Previous Story: ${previousStory}
+            
+            Now, modify the story strictly based on this instruction: ${prompt}
+            - Keep the story format exactly as it was.
+            - Modify only the relevant parts as per the given instruction.
+            - Return the full story with the applied changes.
+            - Do not add any extra messages like "updated version" or explanations—just return the updated story.`;
         } else {
             // Start a new story
             fullPrompt = `Write a structured long story on ${idea} with at least 20000 words.
