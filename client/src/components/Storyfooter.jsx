@@ -79,36 +79,57 @@ function Storyfooter({ isStoryGenerated }) {
         let updatedStory = [];
 
 
-        for (let i = 0; i < tempStory.length; i++) {
-            const section = tempStory[i];
-            console.log(section.content[0]);
-
-            const prompt = `Create an artistic image for kids book : ${section.content}`;
-
-            try {
-                const response = await axios.post(
-                    "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev",
-                    { inputs: prompt },
-                    {
-                        headers: {
-                            Authorization: `Bearer ${import.meta.env.VITE_IMG_GENERATION_KEY}`,
-                            "Content-Type": "application/json",
-                        },
-                        responseType: 'blob'
-                    }
-                );
-
-                const imageURL = await blobToBase64(response.data);
-                console.log(response);
-                updatedStory[i] = { imageURL, ...section };
-                localStorage.setItem('generatedStory', JSON.stringify(updatedStory));
-                window.dispatchEvent(new Event("storage"));
-
-
-            } catch (error) {
-                console.log(`Error generating image for section ${i}:`, error.response?.data || error.message);
-            }
-        }
+        const generateImages = async () => {
+            const requests = tempStory.map(async (section, i) => {
+                try {
+                    // Use section content if available; otherwise, use the heading
+                    const contentText = section.content.length > 0 ? section.content.join(" ") : section.heading;
+                    console.log(`Generating image for section ${i}:`, contentText);
+        
+                    const prompt = `Create an artistic image for a kids' book based on this text: "${contentText}"`;
+        
+                    // Send request to AI model
+                    const response = await axios.post(
+                        "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev",
+                        { inputs: prompt },
+                        {
+                            headers: {
+                                Authorization: `Bearer ${import.meta.env.VITE_IMG_GENERATION_KEY}`,
+                                "Content-Type": "application/json",
+                            },
+                            responseType: "blob",
+                        }
+                    );
+        
+                    // Convert blob to base64
+                    const imageURL = await blobToBase64(response.data);
+                    console.log(`✅ Image generated for section ${i}`);
+        
+                    // Update the story with the new image
+                    updatedStory[i] = { imageURL, ...section };
+        
+                    // Immediately update localStorage and trigger event
+                    localStorage.setItem("generatedStory", JSON.stringify(updatedStory));
+                    window.dispatchEvent(new Event("storage"));
+        
+                    return { success: true, index: i, imageURL };
+        
+                } catch (error) {
+                    console.log(`❌ Error generating image for section ${i}:`, error.response?.data || error.message);
+                    return { success: false, index: i, error: error.message };
+                }
+            });
+        
+            // Run all image requests in parallel and wait for all to complete
+            const results = await Promise.allSettled(requests);
+        
+            // Log summary of completed requests
+            console.log("🔄 All image requests processed:", results);
+        };
+        
+        // Run the function
+        generateImages();
+        
 
         // Save updated story with images in localStorage
         localStorage.setItem('generatedStory', JSON.stringify(updatedStory));
