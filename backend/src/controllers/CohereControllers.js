@@ -15,7 +15,8 @@ async function generateStory(req, res) {
              Now, continue by strictly following this instruction: ${prompt} 
              - Maintain story format as it was.
              - Do changes only in that story whatever you want.
-             - return full story with changes in it.`;
+             - return full story with changes in it.
+             - no need to add any other message like ok upadated version or anything else.`;
         } else {
             // Start a new story
             fullPrompt = `Write a structured long story on ${idea} with at least 20000 words.

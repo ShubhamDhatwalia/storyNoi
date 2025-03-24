@@ -82,13 +82,13 @@ function Storyfooter({ isStoryGenerated }) {
         const generateImages = async () => {
             const requests = tempStory.map(async (section, i) => {
                 try {
-                    // Use section content if available; otherwise, use the heading
+                    
                     const contentText = section.content.length > 0 ? section.content.join(" ") : section.heading;
                     console.log(`Generating image for section ${i}:`, contentText);
         
                     const prompt = `Create an artistic image for a kids' book based on this text: "${contentText}"`;
         
-                    // Send request to AI model
+                    
                     const response = await axios.post(
                         "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev",
                         { inputs: prompt },
@@ -105,10 +105,9 @@ function Storyfooter({ isStoryGenerated }) {
                     const imageURL = await blobToBase64(response.data);
                     console.log(`✅ Image generated for section ${i}`);
         
-                    // Update the story with the new image
                     updatedStory[i] = { imageURL, ...section };
         
-                    // Immediately update localStorage and trigger event
+                    
                     localStorage.setItem("generatedStory", JSON.stringify(updatedStory));
                     window.dispatchEvent(new Event("storage"));
         
@@ -120,10 +119,10 @@ function Storyfooter({ isStoryGenerated }) {
                 }
             });
         
-            // Run all image requests in parallel and wait for all to complete
+           
             const results = await Promise.allSettled(requests);
         
-            // Log summary of completed requests
+          
             console.log("🔄 All image requests processed:", results);
         };
         
