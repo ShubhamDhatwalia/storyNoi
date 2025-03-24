@@ -13,7 +13,9 @@ async function generateStory(req, res) {
             fullPrompt = `Continue the story while maintaining the style, tone, and structure of the previous content. Ensure that the new content smoothly extends the existing story.
              Previous Story:\n${previousStory}\n\n
              Now, continue by strictly following this instruction: ${prompt} 
-             - Maintain story format as it was.`;
+             - Maintain story format as it was.
+             - Do changes only in that story whatever you want.
+             - return full story with changes in it.`;
         } else {
             // Start a new story
             fullPrompt = `Write a structured long story on ${idea} with at least 20000 words.
