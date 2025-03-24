@@ -10,7 +10,7 @@ async function generateStory(req, res) {
 
         if (continueStory && previousStory) {
             // Append to the existing story
-            fullPrompt = ` Content of story should be same and structure also have to follow same  :\n${previousStory}\n\n     but add or remove this ${prompt}  and give full story `;
+            fullPrompt = ` Content of story should be same and structure also have to follow same  \n${previousStory}\n\n     but add or remove this ${prompt}   `;
         } else {
             // Start a new story
             fullPrompt = `Write a structured long story on ${idea} with at least 20000 words.
