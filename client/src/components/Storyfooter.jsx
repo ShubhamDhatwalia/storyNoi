@@ -81,7 +81,6 @@ function Storyfooter({ isStoryGenerated }) {
 
         for (let i = 0; i < tempStory.length; i++) {
             const section = tempStory[i];
-            console.log(section.content[0]);
 
             const prompt = `Create an artistic image for kids book : ${section.content}`;
 
@@ -99,7 +98,6 @@ function Storyfooter({ isStoryGenerated }) {
                 );
 
                 const imageURL = await blobToBase64(response.data);
-                console.log(response);
                 updatedStory[i] = { imageURL, ...section };
                 localStorage.setItem('generatedStory', JSON.stringify(updatedStory));
                 window.dispatchEvent(new Event("storage"));
@@ -118,7 +116,6 @@ function Storyfooter({ isStoryGenerated }) {
         setStory(updatedStory);
         setIsGeneratingImages(false);
         setImagesGenerated(true);
-        console.log(imagesGenerated);
     };
 
 

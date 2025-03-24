@@ -17,7 +17,7 @@ async function generateStory(req, res) {
             - Keep the story format exactly as it was like tags and all things.
             - Modify only the relevant parts as per the given instruction.
             - Return the full story with the applied changes.
-            - Do not add any extra messages like "updated version" or explanations—just return the updated story.`;
+            - Do not add any extra messages like "updated version" or explanations just return the updated story.`;
         } else {
             // Start a new story
             fullPrompt = `Write a structured long story on ${idea} with at least 20000 words.
