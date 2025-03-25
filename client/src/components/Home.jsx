@@ -92,14 +92,14 @@ function Home() {
 
                                 <div >
                                     <h6>Downloads</h6>
-                                    <h1 className='mt-[0px]'> <CountUp start={0} end={12000} duration={3} separator=" " />
+                                    <h1 className='mt-[0px]'> <CountUp start={0} end={12000} duration={5} separator=" " />
                                     </h1>
 
                                 </div>
 
                                 <div>
                                     <h6>Assessment</h6>
-                                    <h1 className='flex items-center gap-[6px] mt-[0px]'>4.8 <img src={star} alt="" /> </h1>
+                                    <h1 className='flex items-center gap-[6px] mt-[0px]'><CountUp start={0} end={4.8} duration={5} decimals={1} /> <img src={star} alt="" /> </h1>
                                 </div>
 
                             </div>
