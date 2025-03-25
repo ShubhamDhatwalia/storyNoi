@@ -15,7 +15,8 @@ import topcenter from "../assets/top-center.png";
 import center from "../assets/center.png"
 import Particle from './Particle';
 import { useNavigate } from 'react-router-dom';
-import { validateIdea } from './helper/Validation.jsx'
+import { validateIdea } from './helper/Validation.jsx';
+import CountUp from 'react-countup';
 
 
 
@@ -92,6 +93,8 @@ function Home() {
                                 <div >
                                     <h6>Downloads</h6>
                                     <h1 className='mt-[0px]'>12 000</h1>
+                                    <CountUp start={0} end={12000} duration={3} separator="," />
+
                                 </div>
 
                                 <div>
