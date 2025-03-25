@@ -117,7 +117,7 @@ function Home() {
 
                             <img src={topcenter} alt="" className='absolute md:top-[-45px] top-[-115px] sm:right-[180px] right-[30%] z-0' />
 
-                            <img src={center} alt="" className='absolute md:bottom-[190px] sm:bottom-[100px] bottom-[45px] sm:right-[328px] right-[30%] z-0' data-aos="zoom-out" />
+                            <img src={center} alt="" className='absolute md:bottom-[190px] sm:bottom-[100px] bottom-[45px] sm:right-[328px] right-[30%] z-0' data-aos="zoom-in" />
 
 
 
