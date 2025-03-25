@@ -35,13 +35,13 @@ function Home() {
 
     useEffect(() => {
         AOS.init({
-          
-            once: true,       
-            
+
+            once: true,
+
         });
         setTimeout(() => {
             AOS.refreshHard();
-        }, );
+        },);
     }, []);
 
     const handleSubmit = async (e) => {
@@ -136,7 +136,7 @@ function Home() {
                         </div>
 
 
-                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="fade-left"/>
+                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="fade-left" />
                         <img src={bottomleft} alt="" className='absolute bottom-[20px] left-[-144px]' data-aos="fade-right" />
 
                     </section>
@@ -197,8 +197,12 @@ function Home() {
             <section id='whystoryNoi' className="bg-[url('./assets/whystoryNoi-bg.png')]  bg-no-repeat bg-cover bg-center sm:py-[120px] py-[40px] ">
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
                     <div className='xl:w-1/2 order-2 xl:order-1 flex gap-[47px]' >
-                        <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' />
-                        <img src={whystory2} alt=""  className='self-end w-[100%] h-auto mt-[90px]'/>
+                        <div>
+                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' />
+                        </div>
+                        <div>
+                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' />
+                        </div>
 
                     </div>
 
