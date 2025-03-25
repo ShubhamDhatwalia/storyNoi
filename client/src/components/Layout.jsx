@@ -20,7 +20,7 @@ function Layout() {
     return (
         <>
 
-            <Navigation data-aos="fade-down" />
+            <Navigation data-aos="fade-up" />
             <Outlet />
             <Footer />
 

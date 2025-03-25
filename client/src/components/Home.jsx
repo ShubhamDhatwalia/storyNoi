@@ -17,8 +17,6 @@ import Particle from './Particle';
 import { useNavigate } from 'react-router-dom';
 import { validateIdea } from './helper/Validation.jsx';
 import CountUp from 'react-countup';
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 
 function Home() {
@@ -30,15 +28,7 @@ function Home() {
 
 
 
-
-
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,  
-            once: true,       
-            easing: "ease-in-out",
-        });
-    }, []);
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
