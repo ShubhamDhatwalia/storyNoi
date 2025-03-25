@@ -37,7 +37,7 @@ function Home() {
             duration: 1000,  
             once: true,       
             easing: "ease-in-out",
-             startEvent: "DOMContentLoaded",
+            
         });
     }, []);
 
