@@ -187,7 +187,7 @@ function Home() {
 
                     <div className='xl:w-1/2 w-full justify-items-center xl:justify-items-normal gap-[20px] '>
 
-                        <div className='xl:absolute top-0 w-[50%] 2xl:right-[-145px] right-[0px]'>
+                        <div className='xl:absolute top-0 xl:w-[50%] w-[100%] 2xl:right-[-145px] right-[0px]'>
                             <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] ' />
                         </div>
 
@@ -219,10 +219,10 @@ function Home() {
                         <ul className='storNoi-ul lg:mt-[29px] mt-[10px] '>
                             <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Relax And Have Fun.</li>
                             <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Express Your Creativity.</li>
-                            <li data-aos="fade-up" data-aos-delay="200"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Learn About Different Cultures And Perspectives.</li>
-                            <li data-aos="fade-up" data-aos-delay="300"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Connect With Other People Who Love To Create Stories.</li>
-                            <li data-aos="fade-up" data-aos-delay="400"><img src={listMark} alt="" className='mt-[12px]' />If You're Looking For A Way To Unleash Your Creativity, Connect With Other People, Or Learn</li>
-                            <li data-aos="fade-up" data-aos-delay="500"><img src={listMark} alt="" className='mt-[12px]' />About Different Cultures, Then Storynoi Is The Perfect Tool For You.</li>
+                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Learn About Different Cultures And Perspectives.</li>
+                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Connect With Other People Who Love To Create Stories.</li>
+                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />If You're Looking For A Way To Unleash Your Creativity, Connect With Other People, Or Learn</li>
+                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />About Different Cultures, Then Storynoi Is The Perfect Tool For You.</li>
 
 
                         </ul>
