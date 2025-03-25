@@ -218,11 +218,11 @@ function Home() {
 
                         <ul className='storNoi-ul lg:mt-[29px] mt-[10px] '>
                             <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Relax And Have Fun.</li>
-                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Express Your Creativity.</li>
-                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Learn About Different Cultures And Perspectives.</li>
-                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Connect With Other People Who Love To Create Stories.</li>
-                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />If You're Looking For A Way To Unleash Your Creativity, Connect With Other People, Or Learn</li>
-                            <li data-aos="fade-up" data-aos-delay="100"><img src={listMark} alt="" className='mt-[12px]' />About Different Cultures, Then Storynoi Is The Perfect Tool For You.</li>
+                            <li data-aos="fade-up" ><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Express Your Creativity.</li>
+                            <li data-aos="fade-up" ><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Learn About Different Cultures And Perspectives.</li>
+                            <li data-aos="fade-up" ><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Connect With Other People Who Love To Create Stories.</li>
+                            <li data-aos="fade-up" ><img src={listMark} alt="" className='mt-[12px]' />If You're Looking For A Way To Unleash Your Creativity, Connect With Other People, Or Learn</li>
+                            <li data-aos="fade-up" ><img src={listMark} alt="" className='mt-[12px]' />About Different Cultures, Then Storynoi Is The Perfect Tool For You.</li>
 
 
                         </ul>
