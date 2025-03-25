@@ -174,7 +174,7 @@ function Home() {
 
             <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center overflow-x-hidden">
 
-                <div className="container flex flex-wrap xl:flex-nowrap relative sm:py-[120px] py-[40px]">
+                <div className="container flex flex-wrap xl:flex-nowrap relative sm:py-[120px] py-[40px] gap-[20px]">
                     <div className='xl:w-1/2 '>
                         <h2 data-aos="fade-right">All One Needs Is An Idea!</h2>
                         <h1 data-aos="fade-right">AI Personalized Stories</h1>
