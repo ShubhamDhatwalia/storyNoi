@@ -36,11 +36,11 @@ function Home() {
         AOS.init({
             duration: 1000,  
             once: true,       
-            easing: "ease-in-out", 
+            
         });
         setTimeout(() => {
             AOS.refreshHard();
-        }, 500);
+        }, );
     }, []);
 
     const handleSubmit = async (e) => {
