@@ -3,6 +3,8 @@ import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Navigation() {
     const [isOpen, setOpen] = useState(false);
@@ -11,6 +13,15 @@ function Navigation() {
 
     // List of paths where the menu should be hidden
     const hideMenuPath = ['/story', '/checkout', '/digitalEbook'];
+
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-in-out",
+        });
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,7 +38,7 @@ function Navigation() {
     return (
         <div className={`fixed right-0 left-0 z-30 transition-all duration-500 
             ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm sm:py-3 py-1 shadow-md' : 'sm:top-[40px] top-[20px]'}
-        `}>
+        `} data-aos="fade-down">
             <div className='container flex justify-between items-center'>
                 <RouterLink to="/" className='cursor-pointer'>
                     <img src={logo} alt="Logo" className="sm:w-[100%] h-auto w-[100px]" />
@@ -73,7 +84,7 @@ function Navigation() {
                             `}
                         >
                             <div className='flex justify-between items-center'>
-                                <RouterLink to="/"  className='cursor-pointer' onClick={() => setOpen(false)}>
+                                <RouterLink to="/" className='cursor-pointer' onClick={() => setOpen(false)}>
                                     <img src={logo} alt="Logo" className="sm:w-[150px] w-[100px]" />
                                 </RouterLink>
                                 <X size={32} onClick={() => setOpen(false)} />
