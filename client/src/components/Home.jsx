@@ -127,7 +127,7 @@ function Home() {
 
                         <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
 
-                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' />
+                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' data-aos="zoom-in" />
 
                         </div>
 
