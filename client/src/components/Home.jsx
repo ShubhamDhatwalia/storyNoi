@@ -172,7 +172,7 @@ function Home() {
                 </div>
             </section>
 
-            <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center ">
+            <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center overflow-x-hidden">
 
                 <div className="container flex flex-wrap xl:flex-nowrap relative sm:py-[120px] py-[40px]">
                     <div className='xl:w-1/2 '>
