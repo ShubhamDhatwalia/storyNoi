@@ -151,8 +151,8 @@ function Home() {
 
                 <div className='container'>
 
-                    <h2>About Us</h2>
-                    <h1>The Perfect Storyteller</h1>
+                    <h2 data-aos="fade-right">About Us</h2>
+                    <h1 data-aos="fade-right">The Perfect Storyteller</h1>
 
                     <div className=' flex-wrap lg:flex-nowrap sm:mt-[36px] mt-[25px] flex items-center lg:gap-[90px] gap-[20px]'>
                         <div className='lg:w-1/2 w-full'>
@@ -175,8 +175,8 @@ function Home() {
 
                 <div className="container flex flex-wrap lg:flex-nowrap">
                     <div className='lg:w-1/2 '>
-                        <h2>All One Needs Is An Idea!</h2>
-                        <h1>AI Personalized Stories</h1>
+                        <h2 data-aos="fade-right">All One Needs Is An Idea!</h2>
+                        <h1 data-aos="fade-right">AI Personalized Stories</h1>
 
                         <p className='sm:pt-[40px] pt-[20px] lg:max-w-[655px]'>All You Need To Do Is Start By Giving The App A Few Prompts. These Prompts Can Be Anything From A Simple Setting To A Complex Character. Once You've Given The App Some Prompts, It Will Start Generating A Story. You Can Then Follow Along As The Story Unfolds, Or You Can Even Take Control Of The Story And Make Your Own Choices.</p>
 
@@ -200,20 +200,20 @@ function Home() {
                     </div>
 
                     <div className="xl:w-1/2 order-1 xl:order-2">
-                        <h2>Why</h2>
-                        <h1>StoryNoi</h1>
+                        <h2 data-aos="fade-left">Why</h2>
+                        <h1 data-aos="fade-left">StoryNoi</h1>
 
-                        <p className='sm:mt-[40px] mt-[20px]'>Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
+                        <p className='sm:mt-[40px] mt-[20px]' data-aos="fade-left">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
 
-                        <p className='!font-bold lg:mt-[45px] mt-[10px]'>Here Are Some Additional Benefits Of Using Storynoi:</p>
+                        <p className='!font-bold lg:mt-[45px] mt-[10px]' data-aos="fade-up">Here Are Some Additional Benefits Of Using Storynoi:</p>
 
                         <ul className='storNoi-ul lg:mt-[29px] mt-[10px] '>
-                            <li><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Relax And Have Fun.</li>
-                            <li><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Express Your Creativity.</li>
-                            <li><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Learn About Different Cultures And Perspectives.</li>
-                            <li><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Connect With Other People Who Love To Create Stories.</li>
-                            <li><img src={listMark} alt="" className='mt-[12px]' />If You're Looking For A Way To Unleash Your Creativity, Connect With Other People, Or Learn</li>
-                            <li><img src={listMark} alt="" className='mt-[12px]' />About Different Cultures, Then Storynoi Is The Perfect Tool For You.</li>
+                            <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Relax And Have Fun.</li>
+                            <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Express Your Creativity.</li>
+                            <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Learn About Different Cultures And Perspectives.</li>
+                            <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />It's A Great Way To Connect With Other People Who Love To Create Stories.</li>
+                            <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />If You're Looking For A Way To Unleash Your Creativity, Connect With Other People, Or Learn</li>
+                            <li data-aos="fade-up"><img src={listMark} alt="" className='mt-[12px]' />About Different Cultures, Then Storynoi Is The Perfect Tool For You.</li>
 
 
                         </ul>
@@ -225,8 +225,8 @@ function Home() {
             <section id='idea' className="bg-[url('./assets/idea-bg.png')] sm:py-[75px] py-[40px]">
                 <div className="container flex flex-wrap lg:flex-nowrap items-center">
                     <div className='lg:w-1/2 w-full  '>
-                        <h1 className='!text-white'>Go Live! Create Your Ebook or Print It!</h1>
-                        <p className='!text-white sm:mt-[40px] mt-[20px] lg:max-w-[655px] leading-[32px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h1 data-aos="fade-right" className='!text-white'>Go Live! Create Your Ebook or Print It!</h1>
+                        <p data-aos="fade-right" className='!text-white sm:mt-[40px] mt-[20px] lg:max-w-[655px] leading-[32px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
 
                     <div className="lg:w-1/2 w-full justify-items-center">
