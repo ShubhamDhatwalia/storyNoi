@@ -77,9 +77,9 @@ function Home() {
 
                 <div className="">
 
-                    <img src={topleft} alt="" className='absolute top-0 left-0 z-10' />
+                    <img src={topleft} alt="" className='absolute top-0 left-0 z-10' data-aos="fade-right" />
 
-                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' />
+                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' data-aos="fade-left" />
 
 
 
@@ -132,8 +132,8 @@ function Home() {
                         </div>
 
 
-                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' />
-                        <img src={bottomleft} alt="" className='absolute bottom-[20px] left-[-144px]' />
+                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="fade-left"/>
+                        <img src={bottomleft} alt="" className='absolute bottom-[20px] left-[-144px]' data-aos="fade-right" />
 
                     </section>
                 </div>
