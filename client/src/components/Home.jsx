@@ -17,6 +17,8 @@ import Particle from './Particle';
 import { useNavigate } from 'react-router-dom';
 import { validateIdea } from './helper/Validation.jsx';
 import CountUp from 'react-countup';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 function Home() {
@@ -28,7 +30,15 @@ function Home() {
 
 
 
-    
+
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,  
+            once: true,       
+            easing: "ease-in-out",
+        });
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -81,8 +91,8 @@ function Home() {
 
 
 
-                            <h1 className='text-center md:text-left relative z-10'>Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
-                            <h2 className='sm:mt-[59px] mt-[15px] relative z-10'>Express your idea in a few words!</h2>
+                            <h1 className='text-center md:text-left relative z-10' data-aos="fade-right">Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
+                            <h2 className='sm:mt-[59px] mt-[15px] relative z-10' data-aos="fade-right">Express your idea in a few words!</h2>
 
                             <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit}>
                                 <input id='idea' type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
