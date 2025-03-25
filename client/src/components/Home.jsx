@@ -187,7 +187,9 @@ function Home() {
 
                     <div className='lg:w-1/2 w-full justify-items-center lg:justify-items-normal gap-[20px] '>
 
-                        <img src={storyNoiimg} alt="" className=' w-[100%] h-auto lg:absolute mt-[20px]  rounded-2xl lg:rounded-none lg:mt-[0px] top-0 right-0' />
+                        <div className='lg:absolute'>
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl lg:rounded-none lg:mt-[0px] top-0 right-0' />
+                        </div>
 
                     </div>
                 </div>
