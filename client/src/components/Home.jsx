@@ -174,21 +174,21 @@ function Home() {
 
             <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center ">
 
-                <div className="container flex flex-wrap lg:flex-nowrap relative sm:py-[120px] py-[40px]">
-                    <div className='lg:w-1/2 '>
+                <div className="container flex flex-wrap xl:flex-nowrap relative sm:py-[120px] py-[40px]">
+                    <div className='xl:w-1/2 '>
                         <h2 data-aos="fade-right">All One Needs Is An Idea!</h2>
                         <h1 data-aos="fade-right">AI Personalized Stories</h1>
 
-                        <p className='sm:pt-[40px] pt-[20px] lg:max-w-[655px]'>All You Need To Do Is Start By Giving The App A Few Prompts. These Prompts Can Be Anything From A Simple Setting To A Complex Character. Once You've Given The App Some Prompts, It Will Start Generating A Story. You Can Then Follow Along As The Story Unfolds, Or You Can Even Take Control Of The Story And Make Your Own Choices.</p>
+                        <p className='sm:pt-[40px] pt-[20px] xl:max-w-[655px]'>All You Need To Do Is Start By Giving The App A Few Prompts. These Prompts Can Be Anything From A Simple Setting To A Complex Character. Once You've Given The App Some Prompts, It Will Start Generating A Story. You Can Then Follow Along As The Story Unfolds, Or You Can Even Take Control Of The Story And Make Your Own Choices.</p>
 
-                        <p className='lg:pt-[45px] pt-[10px] lg:max-w-[655px]'>You Can Create Stories About Anything You Can Imagine. You Can Create Stories About Your Favorite Characters, Your Favorite Places, Or Even Your Own Lif.</p>
+                        <p className='xl:pt-[45px] pt-[10px] xl:max-w-[655px]'>You Can Create Stories About Anything You Can Imagine. You Can Create Stories About Your Favorite Characters, Your Favorite Places, Or Even Your Own Lif.</p>
 
                     </div>
 
-                    <div className='lg:w-1/2 w-full justify-items-center lg:justify-items-normal gap-[20px] '>
+                    <div className='xl:w-1/2 w-full justify-items-center xl:justify-items-normal gap-[20px] '>
 
-                        <div className='lg:absolute top-0 w-[50%] right-[-140px]'>
-                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl lg:rounded-none lg:mt-[0px] ' />
+                        <div className='xl:absolute top-0 w-[50%] right-[-145px]'>
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl lg:rounded-none xl:mt-[0px] ' />
                         </div>
 
                     </div>
