@@ -196,7 +196,7 @@ function Home() {
 
             <section id='whystoryNoi' className="bg-[url('./assets/whystoryNoi-bg.png')]  bg-no-repeat bg-cover bg-center sm:py-[120px] py-[40px] ">
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
-                    <div className='xl:w-1/2 order-2 xl:order-1 flex gap-[47px]' >
+                    <div className='xl:w-1/2 order-2 xl:order-1 flex sm:gap-[47px] gap-[20px]' >
                         <div>
                             <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' />
                         </div>
