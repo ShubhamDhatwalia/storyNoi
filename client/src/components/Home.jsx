@@ -200,10 +200,10 @@ function Home() {
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
                     <div className='xl:w-1/2 order-2 xl:order-1 flex sm:gap-[47px] gap-[20px]' >
                         <div>
-                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' data-aos="fade-right"  />
+                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' data-aos="fade-right" data-aos-delay="400" />
                         </div>
                         <div>
-                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' data-aos="fade-right" data-aos-delay="400"/>
+                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' data-aos="fade-right" />
                         </div>
 
                     </div>
