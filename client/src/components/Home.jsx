@@ -92,8 +92,8 @@ function Home() {
 
                                 <div >
                                     <h6>Downloads</h6>
-                                    <h1 className='mt-[0px]'>12 000</h1>
-                                    <CountUp start={0} end={12000} duration={3} separator="," />
+                                    <h1 className='mt-[0px]'> <CountUp start={0} end={12000} duration={3} separator=" " />
+                                    </h1>
 
                                 </div>
 
