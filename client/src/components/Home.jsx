@@ -172,9 +172,9 @@ function Home() {
                 </div>
             </section>
 
-            <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center sm:py-[120px] py-[40px]">
+            <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center ">
 
-                <div className="container flex flex-wrap lg:flex-nowrap relative">
+                <div className="container flex flex-wrap lg:flex-nowrap relative sm:py-[120px] py-[40px]">
                     <div className='lg:w-1/2 '>
                         <h2 data-aos="fade-right">All One Needs Is An Idea!</h2>
                         <h1 data-aos="fade-right">AI Personalized Stories</h1>
@@ -187,8 +187,8 @@ function Home() {
 
                     <div className='lg:w-1/2 w-full justify-items-center lg:justify-items-normal gap-[20px] '>
 
-                        <div className='lg:absolute'>
-                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl lg:rounded-none lg:mt-[0px] top-0 right-0' />
+                        <div className='lg:absolute top-0 right-0'>
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl lg:rounded-none lg:mt-[0px] ' />
                         </div>
 
                     </div>
