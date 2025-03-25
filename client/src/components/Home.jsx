@@ -83,7 +83,7 @@ function Home() {
 
                     <img src={topleft} alt="" className='absolute top-0 left-0 z-10' data-aos="fade-right" />
 
-                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' data-aos="fade-left" />
+                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' data-aos="zoom-in" />
 
 
 
@@ -136,7 +136,7 @@ function Home() {
                         </div>
 
 
-                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="fade-left" />
+                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="zoom-in" />
                         <img src={bottomleft} alt="" className='absolute bottom-[20px] left-[-144px]' data-aos="fade-right" />
 
                     </section>
@@ -209,10 +209,10 @@ function Home() {
                     </div>
 
                     <div className="xl:w-1/2 order-1 xl:order-2">
-                        <h2 data-aos="fade-left">Why</h2>
-                        <h1 data-aos="fade-left">StoryNoi</h1>
+                        <h2 data-aos="fade-up">Why</h2>
+                        <h1 data-aos="fade-up">StoryNoi</h1>
 
-                        <p className='sm:mt-[40px] mt-[20px]' data-aos="fade-left">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
+                        <p className='sm:mt-[40px] mt-[20px]' data-aos="fade-up">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
 
                         <p className='!font-bold lg:mt-[45px] mt-[10px]' data-aos="fade-up">Here Are Some Additional Benefits Of Using Storynoi:</p>
 
@@ -239,7 +239,7 @@ function Home() {
                     </div>
 
                     <div className="lg:w-1/2 w-full justify-items-center">
-                        <img src={ideaimg} alt="" className='m-[-30px]' data-aos="fade-left" />
+                        <img src={ideaimg} alt="" className='m-[-30px]' data-aos="zoom-in" />
                     </div>
                 </div>
             </section>
