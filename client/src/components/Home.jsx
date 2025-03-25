@@ -161,11 +161,11 @@ function Home() {
                         </div>
 
                         <div className='lg:w-1/2 w-full flex flex-col md:gap-[45px] gap-[10px] lg:max-w-[655px] max-w-[100%]' >
-                            <p>
+                            <p data-aos="fade-up">
                                 Is A Genai Powered App That Lets You Create And Share Your Own Stories. With The Help Of Genai, The App Can Generate Stories Based On Your Prompts And Ideas. You Can Then Turn Your Stories Into Books.
                             </p>
-                            <p>Once You've Created A Story, You Can Share It With Friends And Family Through The App's Social Media Integration.</p>
-                            <p>You Can Also Publish Your Stories Online Through The App's Publishing Pla tform.</p>
+                            <p data-aos="fade-up">Once You've Created A Story, You Can Share It With Friends And Family Through The App's Social Media Integration.</p>
+                            <p data-aos="fade-up">You Can Also Publish Your Stories Online Through The App's Publishing Pla tform.</p>
                         </div>
                     </div>
 
@@ -179,16 +179,16 @@ function Home() {
                         <h2 data-aos="fade-right">All One Needs Is An Idea!</h2>
                         <h1 data-aos="fade-right">AI Personalized Stories</h1>
 
-                        <p className='sm:pt-[40px] pt-[20px] xl:max-w-[655px]'>All You Need To Do Is Start By Giving The App A Few Prompts. These Prompts Can Be Anything From A Simple Setting To A Complex Character. Once You've Given The App Some Prompts, It Will Start Generating A Story. You Can Then Follow Along As The Story Unfolds, Or You Can Even Take Control Of The Story And Make Your Own Choices.</p>
+                        <p className='sm:pt-[40px] pt-[20px] xl:max-w-[655px]' data-aos="fade-up">All You Need To Do Is Start By Giving The App A Few Prompts. These Prompts Can Be Anything From A Simple Setting To A Complex Character. Once You've Given The App Some Prompts, It Will Start Generating A Story. You Can Then Follow Along As The Story Unfolds, Or You Can Even Take Control Of The Story And Make Your Own Choices.</p>
 
-                        <p className='xl:pt-[45px] pt-[10px] xl:max-w-[655px]'>You Can Create Stories About Anything You Can Imagine. You Can Create Stories About Your Favorite Characters, Your Favorite Places, Or Even Your Own Lif.</p>
+                        <p className='xl:pt-[45px] pt-[10px] xl:max-w-[655px]' data-aos="fade-up">You Can Create Stories About Anything You Can Imagine. You Can Create Stories About Your Favorite Characters, Your Favorite Places, Or Even Your Own Lif.</p>
 
                     </div>
 
                     <div className='xl:w-1/2 w-full justify-items-center xl:justify-items-normal gap-[20px] '>
 
                         <div className='xl:absolute top-0 xl:w-[50%] w-[100%] 2xl:right-[-145px] right-[0px]'>
-                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] ' />
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] ' data-aos="zoom-in" />
                         </div>
 
                     </div>
@@ -200,10 +200,10 @@ function Home() {
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
                     <div className='xl:w-1/2 order-2 xl:order-1 flex sm:gap-[47px] gap-[20px]' >
                         <div>
-                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' />
+                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' data-aos="fade-right"  />
                         </div>
                         <div>
-                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' />
+                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' data-aos="fade-right" data-aos-delay="400"/>
                         </div>
 
                     </div>
@@ -212,7 +212,7 @@ function Home() {
                         <h2 data-aos="fade-up">Why</h2>
                         <h1 data-aos="fade-up">StoryNoi</h1>
 
-                        <p className='sm:mt-[40px] mt-[20px]' data-aos="fade-up">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
+                        <p  className='sm:mt-[40px] mt-[20px]' data-aos="fade-up">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
 
                         <p className='!font-bold lg:mt-[45px] mt-[10px]' data-aos="fade-up">Here Are Some Additional Benefits Of Using Storynoi:</p>
 
