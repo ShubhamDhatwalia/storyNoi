@@ -98,7 +98,7 @@ function Home() {
                             <h1 className='text-center md:text-left relative z-10' data-aos="fade-right" >Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
                             <h2 className='sm:mt-[59px] mt-[15px] relative z-10' data-aos="fade-right" >Express your idea in a few words!</h2>
 
-                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit} data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit} data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">
                                 <input id='idea' type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
                                 <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
                             </form>
@@ -157,7 +157,7 @@ function Home() {
 
                     <div className=' flex-wrap lg:flex-nowrap sm:mt-[36px] mt-[25px] flex items-center lg:gap-[90px] gap-[20px]'>
                         <div className='lg:w-1/2 w-full'>
-                            <img src={aboutimg} alt="" className='w-[100%] h-auto ' />
+                            <img src={aboutimg} alt="" className='w-[100%] h-auto ' data-aos="fade-right" />
                         </div>
 
                         <div className='lg:w-1/2 w-full flex flex-col md:gap-[45px] gap-[10px] lg:max-w-[655px] max-w-[100%]' >
@@ -188,7 +188,7 @@ function Home() {
                     <div className='xl:w-1/2 w-full justify-items-center xl:justify-items-normal gap-[20px] '>
 
                         <div className='xl:absolute top-0 xl:w-[50%] w-[100%] 2xl:right-[-145px] right-[0px]'>
-                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] ' data-aos="zoom-in" />
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] '  />
                         </div>
 
                     </div>
@@ -200,7 +200,7 @@ function Home() {
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
                     <div className='xl:w-1/2 order-2 xl:order-1 flex sm:gap-[47px] gap-[20px]' >
                         <div>
-                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' data-aos="fade-right" data-aos-delay="400" />
+                            <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' data-aos="fade-right" data-aos-delay="700" />
                         </div>
                         <div>
                             <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' data-aos="fade-right" />
