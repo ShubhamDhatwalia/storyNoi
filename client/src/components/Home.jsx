@@ -157,7 +157,7 @@ function Home() {
 
                     <div className=' flex-wrap lg:flex-nowrap sm:mt-[36px] mt-[25px] flex items-center lg:gap-[90px] gap-[20px]'>
                         <div className='lg:w-1/2 w-full'>
-                            <img src={aboutimg} alt="" className='w-[100%] h-auto ' data-aos="fade-right" />
+                            <img src={aboutimg} alt="" className='w-[100%] h-auto ' data-aos="zoom-in-up" />
                         </div>
 
                         <div className='lg:w-1/2 w-full flex flex-col md:gap-[45px] gap-[10px] lg:max-w-[655px] max-w-[100%]' >
