@@ -4,7 +4,8 @@ import star from "../assets/star.png";
 import bannerimg from "../assets/banner-image.png";
 import aboutimg from "../assets/aboutimg.png";
 import storyNoiimg from "../assets/storyNoiimg.png";
-import whystory from "../assets/whystoryNoi-image.png";
+import whystory1 from "../assets/whystoryNoi-image1.png";
+import whystory2 from "../assets/whystoryNoi-image2.png";
 import listMark from "../assets/list-mark.png";
 import ideaimg from "../assets/idea-img.png";
 import topRight from "../assets/top-right.png";
@@ -195,8 +196,10 @@ function Home() {
 
             <section id='whystoryNoi' className="bg-[url('./assets/whystoryNoi-bg.png')]  bg-no-repeat bg-cover bg-center sm:py-[120px] py-[40px] ">
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
-                    <div className='xl:w-1/2 order-2 xl:order-1'>
-                        <img src={whystory} alt="" />
+                    <div className='xl:w-1/2 order-2 xl:order-1 flex gap-[47px]' >
+                        <img src={whystory1} alt="" />
+                        <img src={whystory2} alt="" />
+
                     </div>
 
                     <div className="xl:w-1/2 order-1 xl:order-2">
