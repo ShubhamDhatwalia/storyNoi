@@ -89,10 +89,10 @@ p {
 .btn {
     color: #000;
 
-    font-family: "Plus Jakarta Sans";
-    font-size: 18px;
+    font-family: "Plus Jakarta Sans" !important;
+    font-size: 18px !important;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 600 !important;
     line-height: normal;
     text-transform: capitalize;
 }
@@ -301,10 +301,10 @@ nav a:hover {
     }
 
     .input-btn {
-        padding: 12px;
-        font-size: 14px;
-        right: 9px;
-        top: 8px;
+        padding: 12px !important;
+        font-size: 14px !important;
+        right: 9px !important;
+        top: 8px !important;
     }
 
     .input-group input {
