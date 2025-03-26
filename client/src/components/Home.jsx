@@ -113,7 +113,7 @@ function Home() {
                                     top: '10px',
                                     color: 'white',
                                     '&:hover': {
-                                        backgroundColor: '#e67e00' // Custom hover effect
+                                        backgroundColor: '#FF8E00' // Custom hover effect
                                     }
                                 }}> create Story</Button>
                             </form>
