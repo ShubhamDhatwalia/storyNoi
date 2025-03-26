@@ -101,9 +101,21 @@ function Home() {
 
                             <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit} data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">
                                 <input id='idea' type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
-                                <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
+                                {/* <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button> */}
 
-                                <Button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</Button>
+                                <Button type='submit' sx={{
+                                    py: '20px',
+                                    px: '41px',
+                                    backgroundColor: '#FF8E00',
+                                    borderRadius: '12px',
+                                    position: 'absolute',
+                                    right: '9px',
+                                    top: '10px',
+                                    color: 'white',
+                                    '&:hover': {
+                                        backgroundColor: '#e67e00' // Custom hover effect
+                                    }
+                                }}> create Story</Button>
                             </form>
 
                             <div className='flex w-full sm:gap-[113px] justify-around md:justify-normal  sm:mt-[96px] mt-[50px] relative z-10' data-aos="fade-up" >
@@ -191,7 +203,7 @@ function Home() {
                     <div className='xl:w-1/2 w-full justify-items-center xl:justify-items-normal gap-[20px] '>
 
                         <div className='xl:absolute top-0 xl:w-[50%] w-[100%] 2xl:right-[-145px] right-[0px]'>
-                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] '  />
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] ' />
                         </div>
 
                     </div>
@@ -215,7 +227,7 @@ function Home() {
                         <h2 data-aos="fade-up">Why</h2>
                         <h1 data-aos="fade-up">StoryNoi</h1>
 
-                        <p  className='sm:mt-[40px] mt-[20px]' data-aos="fade-up">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
+                        <p className='sm:mt-[40px] mt-[20px]' data-aos="fade-up">Create Stories About Anything You Can Imagine. Create & Share Your Stories With Friends And Family Through Social Media. Publish Your Stories Online Or Turn Your Stories Into Books. It Is The Perfect Tool For Anyone Who Loves To Create Stories. It's Easy To Use, Affordable, And Fun. So What Are You Waiting For? Start Creating Your Own Stories Today!</p>
 
                         <p className='!font-bold lg:mt-[45px] mt-[10px]' data-aos="fade-up">Here Are Some Additional Benefits Of Using Storynoi:</p>
 
