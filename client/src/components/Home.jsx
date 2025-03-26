@@ -20,6 +20,7 @@ import { validateIdea } from './helper/Validation.jsx';
 import CountUp from 'react-countup';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "@mui/material/Button";
 
 
 function Home() {
@@ -101,6 +102,8 @@ function Home() {
                             <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit} data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">
                                 <input id='idea' type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
                                 <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button>
+
+                                <Button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</Button>
                             </form>
 
                             <div className='flex w-full sm:gap-[113px] justify-around md:justify-normal  sm:mt-[96px] mt-[50px] relative z-10' data-aos="fade-up" >
