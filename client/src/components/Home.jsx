@@ -103,7 +103,7 @@ function Home() {
                                 <input id='idea' type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
                                 {/* <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button> */}
 
-                                <Button type='submit' sx={{
+                                <Button type='submit' className='input-bnt btn' sx={{
                                     py: '20px',
                                     px: '41px',
                                     backgroundColor: '#FF8E00',
