@@ -88,12 +88,11 @@ p {
 
 .btn {
     color: #000;
-
-    font-family: "Plus Jakarta Sans";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-family: "Plus Jakarta Sans" !important;
+    font-size: 18px !important;
+   
+    font-weight: 600 !important;
+    line-height: normal !important;
     text-transform: capitalize;
 }
 
