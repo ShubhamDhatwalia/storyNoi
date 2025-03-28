@@ -73,6 +73,9 @@ function Home() {
         <>
 
 
+            <Helmet>
+                <link rel="preload" as="image" href={bannerimg} />
+            </Helmet>
 
             <div id='top' className="  w-full relative">
 
@@ -150,9 +153,7 @@ function Home() {
 
                         <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
 
-                            <Helmet>
-                                <link rel="preload" as="image" href={bannerimg} />
-                            </Helmet>
+
                             <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' data-aos="zoom-in" />
 
                         </div>
