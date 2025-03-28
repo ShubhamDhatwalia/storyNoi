@@ -51,16 +51,23 @@ function Navigation() {
                         <nav className='hidden lg:block'>
                             <ul className="flex gap-[50px] items-center">
                                 <li>
+                                    <a href="/about" className='hidden'>About</a>
                                     <Link to='about' smooth={true} duration={500} spy={true} offset={-87} activeClass="!text-[#FF8E00]">
                                         About Us
                                     </Link>
                                 </li>
                                 <li>
+                                    <a href="/whystoryNoi" className='hidden'>Why StoryNoi</a>
+
                                     <Link to='whystoryNoi' smooth={true} duration={500} spy={true} offset={-87} activeClass="!text-[#FF8E00]">
                                         Why StoryNoi
                                     </Link>
                                 </li>
                                 <li>
+
+                                    <a href="/idea" className='hidden'>Idea</a>
+
+
                                     <Link to='idea' smooth={true} duration={500} spy={true} offset={-87} activeClass="!text-[#FF8E00]">
                                         Idea
                                     </Link>
@@ -92,16 +99,21 @@ function Navigation() {
 
                             <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
                                 <li>
+                                    <a href="/about" className='hidden'>About</a>
                                     <Link to='about' smooth={true} duration={500} spy={true} offset={-60} onClick={() => setOpen(false)} activeClass="!text-[#FF8E00]">
                                         About Us
                                     </Link>
                                 </li>
                                 <li>
+                                    <a href="/whystoryNoi" className='hidden'>Why StoryNoi</a>
+
                                     <Link to='whystoryNoi' smooth={true} duration={500} spy={true} offset={-60} onClick={() => setOpen(false)} activeClass="!text-[#FF8E00]">
                                         Why StoryNoi
                                     </Link>
                                 </li>
                                 <li>
+                                    <a href="/idea" className='hidden'>Idea</a>
+
                                     <Link to='idea' smooth={true} duration={500} spy={true} offset={-60} onClick={() => setOpen(false)} activeClass="!text-[#FF8E00]">
                                         Idea
                                     </Link>
