@@ -11,14 +11,18 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('aos')) return 'aos'; // Separate AOS animations
-            if (id.includes('react')) return 'vendor'; // Separate React libraries
+            // Further split vendor chunks based on specific libraries
+            if (id.includes('react')) return 'react';  // React-specific chunk
+            if (id.includes('lodash')) return 'lodash';  // Split lodash
+            if (id.includes('moment')) return 'moment';  // Split moment.js
+            if (id.includes('axios')) return 'axios';  // Split axios
           }
         },
       },
-    },
+    }
+
   },
   esbuild: {
-    treeShaking: true, 
+    treeShaking: true,
   },
 });
