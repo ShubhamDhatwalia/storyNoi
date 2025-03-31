@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 
 import star from "../assets/star.png";
 import bannerimg from "../assets/banner-image.webp";
-import aboutimg from "../assets/aboutimg.png";
-import storyNoiimg from "../assets/storyNoiimg.png";
-import whystory1 from "../assets/whystoryNoi-image1.png";
-import whystory2 from "../assets/whystoryNoi-image2.png";
+import aboutimg from "../assets/aboutimg.webp";
+import storyNoiimg from "../assets/storyNoiimg.webp";
+import whystory1 from "../assets/whystoryNoi-image1.webp";
+import whystory2 from "../assets/whystoryNoi-image2.webp";
 import listMark from "../assets/list-mark.png";
-import ideaimg from "../assets/idea-img.png";
-import topRight from "../assets/top-right.png";
-import topleft from "../assets/top-left.png"
-import bottomright from "../assets/bottom-right.png"
-import bottomleft from "../assets/bottom-left.png";
-import topcenter from "../assets/top-center.png";
-import center from "../assets/center.png"
+import ideaimg from "../assets/idea-img.webp";
+import topRight from "../assets/top-right.webp";
+import topleft from "../assets/top-left.webp"
+import bottomright from "../assets/bottom-right.webp"
+import bottomleft from "../assets/bottom-left.webp";
+import topcenter from "../assets/top-center.webp";
+import center from "../assets/center.webp"
 import Particle from './Particle';
 import { useNavigate } from 'react-router-dom';
 import { validateIdea } from './helper/Validation.jsx';
@@ -172,7 +172,7 @@ function Home() {
 
 
 
-            <section id='about' className="bg-[url('./assets/aboutbg.png')] sm:py-[120px] py-[40px] bg-no-repeat bg-cover bg-center">
+            <section id='about' className="bg-[url('./assets/aboutbg.webp')] sm:py-[120px] py-[40px] bg-no-repeat bg-cover bg-center">
 
                 <div className='container'>
 
@@ -196,7 +196,7 @@ function Home() {
                 </div>
             </section>
 
-            <section id="storyNoi" className="bg-[url('./assets/storyNoibg.png')] bg-no-repeat bg-cover bg-center overflow-x-hidden">
+            <section id="storyNoi" className="bg-[url('./assets/storyNoibg.webp')] bg-no-repeat bg-cover bg-center overflow-x-hidden">
 
                 <div className="container flex flex-wrap xl:flex-nowrap relative sm:py-[120px] py-[40px] gap-[20px]">
                     <div className='xl:w-1/2 '>
@@ -220,7 +220,7 @@ function Home() {
             </section>
 
 
-            <section id='whystoryNoi' className="bg-[url('./assets/whystoryNoi-bg.png')]  bg-no-repeat bg-cover bg-center sm:py-[120px] py-[40px] ">
+            <section id='whystoryNoi' className="bg-[url('./assets/whystoryNoi-bg.webp')]  bg-no-repeat bg-cover bg-center sm:py-[120px] py-[40px] ">
                 <div className='container flex flex-wrap xl:flex-nowrap sm:gap-[80px] gap-[30px] items-center justify-center'>
                     <div className='xl:w-1/2 order-2 xl:order-1 flex sm:gap-[47px] gap-[20px]' >
                         <div>
@@ -255,7 +255,7 @@ function Home() {
             </section>
 
 
-            <section id='idea' className="bg-[url('./assets/idea-bg.png')] sm:py-[75px] py-[40px]">
+            <section id='idea' className="bg-[url('./assets/idea-bg.webp')] sm:py-[75px] py-[40px]">
                 <div className="container flex flex-wrap lg:flex-nowrap items-center">
                     <div className='lg:w-1/2 w-full  '>
                         <h1 data-aos="fade-right" className='!text-white'>Go Live! Create Your Ebook or Print It!</h1>

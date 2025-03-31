@@ -1,6 +1,6 @@
 import React from 'react';
-import topLeft from '../assets/top-left.png';
-import topRight from "../assets/top-right.png";
+import topLeft from '../assets/top-left.webp';
+import topRight from "../assets/top-right.webp";
 import { X } from 'lucide-react';
 
 import { WithWatermark } from './WithWatermark';
