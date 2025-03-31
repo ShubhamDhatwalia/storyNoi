@@ -75,6 +75,17 @@ function Home() {
 
             <Helmet>
                 <link rel="preload" as="image" href="/assets/banner-image.avif" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/bottom-right.webp" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/bottom-left.webp" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="top-center.webp" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/top-left.webp" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/top-right.webp" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/center.webp" type="image/webp" fetchpriority="high" />
+
+
+
+
+
             </Helmet>
 
             <div id='top' className="  w-full relative">
