@@ -20,9 +20,9 @@ export default defineConfig({
         },
       },
     }
-
+    
   },
   esbuild: {
-    treeShaking: true,
+    treeShaking: true, 
   },
 });
