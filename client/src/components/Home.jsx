@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import star from "../assets/star.png";
-import bannerimg from "../assets/banner-image.png";
+import bannerimg from "../assets/banner-image.webp";
 import aboutimg from "../assets/aboutimg.png";
 import storyNoiimg from "../assets/storyNoiimg.png";
 import whystory1 from "../assets/whystoryNoi-image1.png";
