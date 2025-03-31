@@ -3,22 +3,19 @@ import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Navigation() {
     const [isOpen, setOpen] = useState(false);
     const [isScrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState(""); // Track active section
     const location = useLocation();
-
-    // List of paths where the menu should be hidden
-    const hideMenuPath = ['/story', '/checkout', '/digitalEbook'];
-
-
-
     const navigate = useNavigate();
 
+    const hideMenuPath = ['/story', '/checkout', '/digitalEbook'];
+
+    // Handle smooth scrolling when clicking a menu item
     useEffect(() => {
         const handleSmoothScroll = (event) => {
             if (event.target.classList.contains("scroll-link")) {
@@ -31,12 +28,6 @@ function Navigation() {
 
                 if (targetElement) {
                     targetElement.scrollIntoView({ behavior: "smooth" });
-
-                    document.querySelectorAll(".scroll-link").forEach((link) => {
-                        link.classList.remove("!text-[#FF8E00]");
-                    });
-
-                    event.target.classList.add("!text-[#FF8E00]");
                 }
             }
         };
@@ -45,21 +36,29 @@ function Navigation() {
         return () => document.removeEventListener("click", handleSmoothScroll);
     }, []);
 
-
+    // Detect scrolling and update the active section
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: "ease-in-out",
-        });
-    }, []);
+        const sections = ["about", "whystoryNoi", "idea"];
 
-    useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 0);
+
+            let currentSection = "";
+            for (let section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        currentSection = section;
+                        break;
+                    }
+                }
+            }
+            setActiveSection(currentSection);
         };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     useEffect(() => {
@@ -68,31 +67,29 @@ function Navigation() {
 
     return (
         <div className={`fixed right-0 left-0 z-30 transition-all duration-500 
-            ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm sm:py-3 py-1 shadow-md' : 'sm:top-[40px] top-[20px]'}
-        `} >
-            <div className='container flex justify-between items-center ' data-aos="fade-down">
+            ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm sm:py-3 py-1 shadow-md' : 'sm:top-[40px] top-[20px]'}`}
+        >
+            <div className='container flex justify-between items-center' data-aos="fade-down">
                 <RouterLink to="/" className='cursor-pointer'>
                     <img src={logo} alt="Logo" className="sm:w-[100%] h-auto w-[100px]" />
                 </RouterLink>
 
-                {/* Hide menu if the current page is in hideMenuPath */}
                 {!hideMenuPath.includes(location.pathname) && (
                     <>
-                        {/* Desktop Navigation */}
                         <nav className='hidden lg:block'>
                             <ul className="flex gap-[50px] items-center">
                                 <li>
-                                    <RouterLink to="/#about" className="scroll-link">
+                                    <RouterLink to="/#about" className={`scroll-link ${activeSection === "about" ? "!text-[#FF8E00]" : ""}`}>
                                         About Us
                                     </RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink to="/#whystoryNoi" className="scroll-link">
+                                    <RouterLink to="/#whystoryNoi" className={`scroll-link ${activeSection === "whystoryNoi" ? "!text-[#FF8E00]" : ""}`}>
                                         Why StoryNoi
                                     </RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink to="/#idea" className="scroll-link">
+                                    <RouterLink to="/#idea" className={`scroll-link ${activeSection === "idea" ? "!text-[#FF8E00]" : ""}`}>
                                         Idea
                                     </RouterLink>
                                 </li>
@@ -113,8 +110,7 @@ function Navigation() {
                         <nav
                             className={`lg:hidden bg-white backdrop-blur-xs absolute right-0 p-[20px] w-full h-screen overflow-hidden duration-500 
                                 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'} 
-                                ${isScrolled ? 'top-0' : 'sm:top-[-40px] top-[-20px]'}
-                            `}
+                                ${isScrolled ? 'top-0' : 'sm:top-[-40px] top-[-20px]'}`}
                         >
                             <div className='flex justify-between items-center'>
                                 <RouterLink to="/" className='cursor-pointer' onClick={() => setOpen(false)}>
@@ -125,17 +121,17 @@ function Navigation() {
 
                             <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
                                 <li>
-                                    <RouterLink to="/#about" className="scroll-link">
+                                    <RouterLink to="/#about" className={`scroll-link ${activeSection === "about" ? "!text-[#FF8E00]" : ""}`}>
                                         About Us
                                     </RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink to="/#whystoryNoi" className="scroll-link">
+                                    <RouterLink to="/#whystoryNoi" className={`scroll-link ${activeSection === "whystoryNoi" ? "!text-[#FF8E00]" : ""}`}>
                                         Why StoryNoi
                                     </RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink to="/#idea" className="scroll-link">
+                                    <RouterLink to="/#idea" className={`scroll-link ${activeSection === "idea" ? "!text-[#FF8E00]" : ""}`}>
                                         Idea
                                     </RouterLink>
                                 </li>
