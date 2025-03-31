@@ -74,7 +74,7 @@ function Home() {
 
 
             <Helmet>
-                <link rel="preload" as="image" href="/assets/banner-image.avif" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/banner-image.avif" type="image/webp"  />
             </Helmet>
 
             <div id='top' className="  w-full relative">
@@ -154,7 +154,7 @@ function Home() {
                         <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
 
 
-                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' data-aos="zoom-in"  fetchpriority="high" />
+                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' data-aos="zoom-in"   />
 
                         </div>
 
