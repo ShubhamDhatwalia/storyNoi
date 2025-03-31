@@ -19,6 +19,6 @@ export default defineConfig({
     },
   },
   esbuild: {
-    treeShaking: true, // Remove unused JS
+    treeShaking: true, 
   },
 });
