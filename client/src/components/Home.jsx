@@ -36,12 +36,12 @@ function Home() {
 
 
     useEffect(() => {
-        AOS.init({
-            once: true,
-            delay: 0, 
-        });
+        setTimeout(() => {
+            AOS.init({ duration: 800, once: true, easing: "ease-in-out" });
+        }, 1000);
     }, []);
-    
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -87,7 +87,7 @@ function Home() {
 
                     <img src={topleft} alt="" className='absolute top-0 left-0 z-10' data-aos="fade-right" loading="lazy" />
 
-                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' data-aos="zoom-in" loading="lazy"/>
+                    <img src={topRight} alt="" className='absolute top-0 right-0 z-10 bottom-0' data-aos="zoom-in" loading="lazy" />
 
 
 
@@ -140,7 +140,7 @@ function Home() {
 
                             <img src={topcenter} alt="" className='absolute md:top-[-45px] top-[-115px] sm:right-[180px] right-[30%] z-0' data-aos="zoom-in" loading="lazy" />
 
-                            <img src={center} alt="" className='absolute md:bottom-[190px] sm:bottom-[100px] bottom-[45px] sm:right-[328px] right-[30%] z-0' data-aos="zoom-in"  loading="lazy"/>
+                            <img src={center} alt="" className='absolute md:bottom-[190px] sm:bottom-[100px] bottom-[45px] sm:right-[328px] right-[30%] z-0' data-aos="zoom-in" loading="lazy" />
 
 
 
@@ -151,12 +151,12 @@ function Home() {
                         <div className="image w-full justify-items-center lg:flex-1/2 order-1 lg:order-2 ">
 
 
-                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' data-aos="zoom-in" loading="eager" fetchpriority="high"  />
+                            <img src={bannerimg} alt="" className='w-[100%] h-[auto] relative z-20' data-aos="zoom-in" loading="lazy" fetchpriority="high" />
 
                         </div>
 
 
-                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="zoom-in"  loading="lazy"/>
+                        <img src={bottomright} alt="" className='bottom-0 absolute right-[-60px] z-0' data-aos="zoom-in" loading="lazy" />
                         <img src={bottomleft} alt="" className='absolute bottom-[20px] left-[-144px]' data-aos="fade-right" loading="lazy" />
 
 
@@ -209,7 +209,7 @@ function Home() {
                     <div className='xl:w-1/2 w-full justify-items-center xl:justify-items-normal gap-[20px] '>
 
                         <div className='xl:absolute top-0 xl:w-[50%] w-[100%] 2xl:right-[-145px] right-[0px]'>
-                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] '  loading="lazy"/>
+                            <img src={storyNoiimg} alt="" className=' w-[100%] h-auto  mt-[20px]  rounded-2xl xl:rounded-none xl:mt-[0px] ' loading="lazy" />
                         </div>
 
                     </div>
@@ -224,7 +224,7 @@ function Home() {
                             <img src={whystory1} alt="" className='w-[100%] h-auto mb-[90px]' data-aos="fade-right" data-aos-delay="700" loading="lazy" />
                         </div>
                         <div>
-                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' data-aos="fade-right"  loading="lazy"/>
+                            <img src={whystory2} alt="" className='w-[100%] h-auto mt-[90px]' data-aos="fade-right" loading="lazy" />
                         </div>
 
                     </div>
@@ -260,7 +260,7 @@ function Home() {
                     </div>
 
                     <div className="lg:w-1/2 w-full justify-items-center">
-                        <img src={ideaimg} alt="" className='m-[-30px]' data-aos="zoom-in"  loading="lazy"/>
+                        <img src={ideaimg} alt="" className='m-[-30px]' data-aos="zoom-in" loading="lazy" />
                     </div>
                 </div>
             </section>
