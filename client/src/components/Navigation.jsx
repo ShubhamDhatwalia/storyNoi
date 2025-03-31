@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,22 +17,28 @@ function Navigation() {
 
 
 
-
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleSmoothScroll = (event) => {
             if (event.target.classList.contains("scroll-link")) {
                 event.preventDefault();
+
+                // Remove hash from URL (prevent navigation)
+                navigate(window.location.pathname, { replace: true });
+
                 const targetId = event.target.getAttribute("href").replace("/#", "");
                 const targetElement = document.getElementById(targetId);
+
                 if (targetElement) {
                     targetElement.scrollIntoView({ behavior: "smooth" });
 
+                    // Remove active class from all links
                     document.querySelectorAll(".scroll-link").forEach((link) => {
                         link.classList.remove("!text-[#FF8E00]");
                     });
 
+                    // Add active class to clicked link
                     event.target.classList.add("!text-[#FF8E00]");
                 }
             }
