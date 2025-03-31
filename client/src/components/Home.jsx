@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import star from "../assets/star.png";
-import bannerimg from "../assets/banner-image.webp";
+import bannerimg from "../assets/banner-image.avif";
 import aboutimg from "../assets/aboutimg.webp";
 import storyNoiimg from "../assets/storyNoiimg.webp";
 import whystory1 from "../assets/whystoryNoi-image1.webp";
@@ -74,7 +74,7 @@ function Home() {
 
 
             <Helmet>
-                <link rel="preload" as="image" href="/assets/banner-image.webp" type="image/webp" fetchpriority="high" />
+                <link rel="preload" as="image" href="/assets/banner-image.avif" type="image/webp" fetchpriority="high" />
             </Helmet>
 
             <div id='top' className="  w-full relative">
