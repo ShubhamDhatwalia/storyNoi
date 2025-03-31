@@ -103,9 +103,9 @@ function Home() {
                             <h1 className='text-center md:text-left relative z-10' data-aos="fade-right" >Let Gen - AI Turn Your Idea to a  <span className='text-[#FF8E00]'>kid’s Book!</span></h1>
                             <h2 className='sm:mt-[59px] mt-[15px] relative z-10' data-aos="fade-right" >Express your idea in a few words!</h2>
 
-                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit} data-aos="fade-right" >
+                            <form className="input-group sm:max-w-[646px] w-full relative mt-[33px] z-10" onSubmit={handleSubmit} data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">
                                 <input id='idea' type="text" placeholder='Share your idea to start the book creation' value={idea} className={`'idea bg-white rounded-[20px] w-full  py-[30px] pl-[30px] pr-[220px] focus:outline-none' ${isError ? 'outline-2 outline-red-500' : 'outline-none '}`} onChange={handleChange} />
-                                {/* <button type='submit' className='input-btn btn py-[20px] px-[41px] bg-[#FF8E00] rounded-[12px] absolute right-[9px] top-[10px] !text-white'> create Story</button> */}
+                              
 
                                 <Button type='submit' className='input-btn btn' sx={{
                                     py: '20px',
@@ -117,7 +117,7 @@ function Home() {
                                     top: '10px',
                                     color: 'white',
                                     '&:hover': {
-                                        backgroundColor: '#FF8E00' // Custom hover effect
+                                        backgroundColor: '#FF8E00' 
                                     }
                                 }}> create Story</Button>
                             </form>
