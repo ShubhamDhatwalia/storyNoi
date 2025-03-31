@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,6 +12,33 @@ function Navigation() {
 
     // List of paths where the menu should be hidden
     const hideMenuPath = ['/story', '/checkout', '/digitalEbook'];
+
+
+
+
+
+
+    useEffect(() => {
+        const handleSmoothScroll = (event) => {
+            if (event.target.classList.contains("scroll-link")) {
+                event.preventDefault();
+                const targetId = event.target.getAttribute("href").replace("/#", "");
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+
+                    document.querySelectorAll(".scroll-link").forEach((link) => {
+                        link.classList.remove("!text-[#FF8E00]");
+                    });
+
+                    event.target.classList.add("!text-[#FF8E00]");
+                }
+            }
+        };
+
+        document.addEventListener("click", handleSmoothScroll);
+        return () => document.removeEventListener("click", handleSmoothScroll);
+    }, []);
 
 
     useEffect(() => {
@@ -51,19 +77,19 @@ function Navigation() {
                         <nav className='hidden lg:block'>
                             <ul className="flex gap-[50px] items-center">
                                 <li>
-                                    <Link to='about' smooth={true} duration={500} spy={true} offset={-87} activeClass="!text-[#FF8E00]">
+                                    <RouterLink to="/#about" className="scroll-link">
                                         About Us
-                                    </Link>
+                                    </RouterLink>
                                 </li>
                                 <li>
-                                    <Link to='whystoryNoi' smooth={true} duration={500} spy={true} offset={-87} activeClass="!text-[#FF8E00]">
+                                    <RouterLink to="/#whystoryNoi" className="scroll-link">
                                         Why StoryNoi
-                                    </Link>
+                                    </RouterLink>
                                 </li>
                                 <li>
-                                    <Link to='idea' smooth={true} duration={500} spy={true} offset={-87} activeClass="!text-[#FF8E00]">
+                                    <RouterLink to="/#idea" className="scroll-link">
                                         Idea
-                                    </Link>
+                                    </RouterLink>
                                 </li>
                                 <RouterLink to="/login" className="btn ml-[30px] font-semibold px-[44px] py-[12px] border-2 border-black rounded-[12px]">
                                     <button type="button">Log In</button>
