@@ -118,19 +118,19 @@ function Navigation() {
 
                             <ul className="flex flex-col gap-[25px] items-center justify-center h-full">
                                 <li>
-                                    <Link to='about' smooth={true} duration={500} spy={true} offset={-60} onClick={() => setOpen(false)} activeClass="!text-[#FF8E00]">
+                                    <RouterLink to="/#about" className="scroll-link">
                                         About Us
-                                    </Link>
+                                    </RouterLink>
                                 </li>
                                 <li>
-                                    <Link to='whystoryNoi' smooth={true} duration={500} spy={true} offset={-60} onClick={() => setOpen(false)} activeClass="!text-[#FF8E00]">
+                                    <RouterLink to="/#whystoryNoi" className="scroll-link">
                                         Why StoryNoi
-                                    </Link>
+                                    </RouterLink>
                                 </li>
                                 <li>
-                                    <Link to='idea' smooth={true} duration={500} spy={true} offset={-60} onClick={() => setOpen(false)} activeClass="!text-[#FF8E00]">
+                                    <RouterLink to="/#idea" className="scroll-link">
                                         Idea
-                                    </Link>
+                                    </RouterLink>
                                 </li>
                                 <RouterLink to="/login" className="btn font-semibold px-[45px] py-[12px] border-2 border-black rounded-[12px]" onClick={() => setOpen(false)}>
                                     <button type="button">Log In</button>
