@@ -24,7 +24,6 @@ function Navigation() {
             if (event.target.classList.contains("scroll-link")) {
                 event.preventDefault();
 
-                // Remove hash from URL (prevent navigation)
                 navigate(window.location.pathname, { replace: true });
 
                 const targetId = event.target.getAttribute("href").replace("/#", "");
@@ -33,12 +32,10 @@ function Navigation() {
                 if (targetElement) {
                     targetElement.scrollIntoView({ behavior: "smooth" });
 
-                    // Remove active class from all links
                     document.querySelectorAll(".scroll-link").forEach((link) => {
                         link.classList.remove("!text-[#FF8E00]");
                     });
 
-                    // Add active class to clicked link
                     event.target.classList.add("!text-[#FF8E00]");
                 }
             }
@@ -99,9 +96,11 @@ function Navigation() {
                                         Idea
                                     </RouterLink>
                                 </li>
-                                <RouterLink to="/login" className="btn ml-[30px] font-semibold px-[44px] py-[12px] border-2 border-black rounded-[12px]">
-                                    <button type="button">Log In</button>
-                                </RouterLink>
+                                <li>
+                                    <RouterLink to="/login" className="btn ml-[30px] font-semibold px-[44px] py-[12px] border-2 border-black rounded-[12px]">
+                                        <button type="button">Log In</button>
+                                    </RouterLink>
+                                </li>
                             </ul>
                         </nav>
 
@@ -140,9 +139,11 @@ function Navigation() {
                                         Idea
                                     </RouterLink>
                                 </li>
-                                <RouterLink to="/login" className="btn font-semibold px-[45px] py-[12px] border-2 border-black rounded-[12px]" onClick={() => setOpen(false)}>
-                                    <button type="button">Log In</button>
-                                </RouterLink>
+                                <li>
+                                    <RouterLink to="/login" className="btn font-semibold px-[45px] py-[12px] border-2 border-black rounded-[12px]" onClick={() => setOpen(false)}>
+                                        <button type="button">Log In</button>
+                                    </RouterLink>
+                                </li>
                             </ul>
                         </nav>
                     </>
