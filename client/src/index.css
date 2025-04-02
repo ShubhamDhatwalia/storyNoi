@@ -367,7 +367,9 @@ nav a:hover {
   .page.stf__item.--soft.--simple.--right{
     height: 1000px !important;
   }
-  
+  .stf__wrapper.--landscape {
+    height: 1000px !important;
+}
   .page {
     display: flex;
     flex-direction: column;
