@@ -256,7 +256,7 @@ nav a:hover {
     .generatedStory li {
         font-size: 14px;
         line-height: 16px;
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     .generatedStory h2,
