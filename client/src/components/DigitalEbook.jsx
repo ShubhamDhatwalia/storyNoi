@@ -26,7 +26,8 @@ const DigitalEbook = () => {
                         size="stretch" // Stretch to fit container
                         minWidth={425} // Minimum width
                         maxWidth={720} // Maximum width
-                       
+                        minHeight={1000}
+                        maxHeight={1000}
                         className="flipbook"
                     >
                         {storyData.map((page, index) => (
