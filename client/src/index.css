@@ -369,6 +369,7 @@ nav a:hover {
   }
   .stf__wrapper.--landscape {
     height: 1000px !important;
+    padding-bottom: 0px !important;
 }
   .page {
     display: flex;
