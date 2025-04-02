@@ -361,6 +361,12 @@ nav a:hover {
     max-height: 100%; /* Adjust maximum height */
     
   }
+  .page.stf__item.--soft.--simple.--left{
+    height: 1000px !important;
+  }
+  .page.stf__item.--soft.--simple.--right{
+    height: 1000px !important;
+  }
   
   .page {
     display: flex;
