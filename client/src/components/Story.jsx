@@ -21,6 +21,14 @@ function Story() {
     const scrollRef = useRef(null);
 
 
+     useEffect(() => {
+            setTimeout(() => {
+                AOS.init({
+                    once: true,
+                    delay: 0,
+                });
+            }, ); 
+        }, []);
 
     // Load story from localStorage
     useEffect(() => {
