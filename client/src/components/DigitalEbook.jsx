@@ -24,7 +24,7 @@ const DigitalEbook = () => {
                         width={720} // Default width
                         height={1000} // Default height
                         size="stretch" // Stretch to fit container
-                        minWidth={425} // Minimum width
+                        minWidth={350} // Minimum width
                         maxWidth={720} // Maximum width
                         minHeight={1000}
                         maxHeight={1500}
