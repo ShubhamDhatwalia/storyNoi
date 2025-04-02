@@ -111,7 +111,7 @@ function Story() {
                 <img src={stroyTopRight} alt="" className='absolute right-0 top-0' />
 
                 <div className="container">
-                    <div className='bg-[#F6F6F6] h-[100vh] p-[15px] lg:py-[70px] rounded-[22px] relative z-10'>
+                    <div className='bg-[#F6F6F6] sm:h-[100vh] h:[80vh] p-[15px] lg:py-[70px] rounded-[22px] relative z-10'>
                         <div id='story'
                             ref={scrollRef}
                             className="generatedStory flex flex-col sm:gap-[38px] gap-[20px] h-[100%] overflow-y-auto rounded-[10px] lg:px-[50px]"
