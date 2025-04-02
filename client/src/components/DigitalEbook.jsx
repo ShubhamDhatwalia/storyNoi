@@ -23,7 +23,7 @@ const DigitalEbook = () => {
                     <HTMLFlipBook
                         width={720} // Default width (adjustable)
                         height={1000} // Default height (adjustable)
-                        className="flipbook"
+                         className="flipbook w-full max-w-[720px]"
                     >
                         {storyData.map((page, index) => (
                             <div key={index} className="page">
