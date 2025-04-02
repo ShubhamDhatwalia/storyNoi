@@ -21,7 +21,7 @@ const DigitalEbook = () => {
 
                 <div className="book-container  sm:py-[160px] py-[80px] sm:pb-[160px] pb-[165px]">
                     <HTMLFlipBook
-                        width={720} // Default width (adjustable)
+                        width={620} // Default width (adjustable)
                         height={1000} // Default height (adjustable)
                          className="flipbook w-full "
                     >
