@@ -164,7 +164,7 @@ function Storyfooter({ isStoryGenerated }) {
 
     return (
         <>
-            <footer className='bg-[#5CE1E6] md:py-[32px] py-[20px] fixed bottom-0 left-0 right-0 md:px-[70px] px-20px z-20'>
+            <footer className='bg-[#5CE1E6] md:py-[32px] py-[20px] fixed bottom-0 left-0 right-0 md:px-[20px] px-20px z-20'>
                 <div className='container'>
                     <div className={`rounded-[20px] border border-[rgba(0,0,0,0.10)] bg-white shadow-md max-w-[1300px] mx-auto p-[10px] ${isError ? 'border-2 border-red-500' : 'border-2 border-white '}`}>
                         {!startConversation && !imagesGenerated && (
