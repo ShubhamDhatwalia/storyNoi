@@ -19,7 +19,7 @@ const DigitalEbook = () => {
                 <img src={stroyTopRight} alt="" className='absolute right-0 top-0' />
 
 
-                <div className="book-container sm:py-[170px] py-[80px]">
+                <div className="book-container !sm:py-[170px] !py-[80px]">
                     <HTMLFlipBook
                         width={720} // Default width
                         height={1000} // Default height
