@@ -166,7 +166,7 @@ nav a:hover {
 }
 
 .generatedStory p,
-.generatedStory div,
+.printable-content div,
 .generatedStory li {
     font-family: "Plus Jakarta Sans";
     font-size: 20px;
