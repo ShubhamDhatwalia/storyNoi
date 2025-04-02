@@ -103,7 +103,7 @@ function Story() {
 
     return (
         <>
-            <div className="bg-[url('./assets/create-story-bg.png')] md:py-[160px] py-[80px] md:pb-[160px] pb-[160px]  bg-no-repeat bg-center bg-cover relative">
+            <div className="bg-[url('./assets/create-story-bg.png')] md:py-[160px] py-[80px] md:pb-[160px] pb-[180px]  bg-no-repeat bg-center bg-cover relative">
 
 
                 <img src={storyTopCenter} alt="" className='absolute right-[40%] top-0' />
@@ -111,7 +111,7 @@ function Story() {
                 <img src={stroyTopRight} alt="" className='absolute right-0 top-0' />
 
                 <div className="container">
-                    <div className='bg-[#F6F6F6] sm:h-[100vh] h:[70vh] p-[15px] lg:py-[70px] rounded-[22px] relative z-10'>
+                    <div className='bg-[#F6F6F6] sm:h-[100vh] h:[70vh] p-[15px] pb-[0px] lg:py-[70px] rounded-[22px] relative z-10'>
                         <div id='story'
                             ref={scrollRef}
                             className="generatedStory flex flex-col sm:gap-[38px] gap-[20px] h-[100%] overflow-y-auto rounded-[10px] lg:px-[50px]"
