@@ -15,6 +15,12 @@ function Navigation() {
 
     const hideMenuPath = ['/story', '/checkout', '/digitalEbook'];
 
+
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     // Handle smooth scrolling when clicking a menu item
     useEffect(() => {
         const handleSmoothScroll = (event) => {
