@@ -69,7 +69,7 @@ function Navigation() {
         <div className={`fixed right-0 left-0 z-30 transition-all duration-500 
             ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm sm:py-3 py-1 shadow-md' : 'sm:top-[40px] top-[20px]'}`}
         >
-            <div className='container flex justify-between items-center' data-aos="fade-down">
+            <div className='container  flex justify-between items-center' data-aos="fade-down">
                 
                 {/* ✅ Always Show the Logo */}
                 <RouterLink to="/" className='cursor-pointer'>
