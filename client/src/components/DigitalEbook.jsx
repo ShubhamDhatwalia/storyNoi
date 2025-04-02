@@ -22,11 +22,11 @@ const DigitalEbook = () => {
                 <div className="book-container !py-[170px]">
                     <HTMLFlipBook
                         width={720} // Default width
-                        height={800} // Default height
+                        height={1000} // Default height
                         size="stretch" // Stretch to fit container
-                        minWidth={300} // Minimum width
+                        minWidth={425} // Minimum width
                         maxWidth={720} // Maximum width
-                        minHeight={400} // Minimum height
+                       
                         maxHeight={1000} // Maximum height
                         className="flipbook"
                     >
