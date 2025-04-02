@@ -41,7 +41,7 @@ function Home() {
                 once: true,
                 delay: 0,
             });
-        }, 500); // Delays AOS to free up main thread
+        }, ); 
     }, []);
     
 
