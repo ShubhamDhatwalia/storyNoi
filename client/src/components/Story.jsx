@@ -103,7 +103,7 @@ function Story() {
 
     return (
         <>
-            <div className="bg-[url('./assets/create-story-bg.png')] md:py-[160px] py-[80px] bg-no-repeat bg-center bg-cover relative">
+            <div className="bg-[url('./assets/create-story-bg.png')] md:py-[160px] py-[80px] md:pb-[160px] pb-[250px]  bg-no-repeat bg-center bg-cover relative">
 
 
                 <img src={storyTopCenter} alt="" className='absolute right-[40%] top-0' />
