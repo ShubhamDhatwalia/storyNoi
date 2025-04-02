@@ -70,7 +70,7 @@ function Navigation() {
             ${isScrolled ? 'top-0 w-full bg-white/80 backdrop-blur-sm sm:py-3 py-1 shadow-md' : 'sm:top-[40px] top-[20px]'}`}
         >
             <div className='container flex justify-between items-center' data-aos="fade-down">
-                <RouterLink to="/" className='cursor-pointer'>
+                <RouterLink to="" className='cursor-pointer'>
                     <img src={logo} alt="Logo" className="sm:w-[100%] h-auto w-[100px]" />
                 </RouterLink>
 
