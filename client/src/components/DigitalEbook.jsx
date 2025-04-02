@@ -19,7 +19,7 @@ const DigitalEbook = () => {
                 <img src={stroyTopRight} alt="" className='absolute right-0 top-0' />
 
 
-                <div className="book-container !py-[170px] h-[100px]">
+                <div className="book-container !py-[170px]">
                     <HTMLFlipBook
                         width={720} // Default width
                         height={1000} // Default height
@@ -27,7 +27,7 @@ const DigitalEbook = () => {
                         minWidth={425} // Minimum width
                         maxWidth={720} // Maximum width
                         minHeight={1000}
-                        maxHeight={1000}
+                        maxHeight={1500}
                         className="flipbook"
                     >
                         {storyData.map((page, index) => (
